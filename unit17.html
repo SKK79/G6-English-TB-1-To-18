@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 17 – Expressing Surprise and Dismay | Grade 6 English</title>
+<style>
+:root{--p:#7b241c;--p2:#c0392b;--p3:#f5b7b1;--bg:#fdf2f0;--card:#fff;--border:#f5cdc9;--text:#2c1a18;--muted:#9c6b68;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.7}
+/* HERO */
+.hero{background:linear-gradient(135deg,#4a0e0a,#7b241c,#c0392b);color:#fff;padding:40px 20px 32px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat}
+.hero-inner{position:relative;max-width:800px;margin:0 auto}
+.hero-badge{display:inline-block;background:rgba(255,255,255,.2);border:2px solid rgba(255,255,255,.4);border-radius:30px;padding:4px 18px;font-size:13px;font-weight:700;letter-spacing:.5px;margin-bottom:12px}
+.hero h1{font-size:clamp(22px,5vw,36px);font-weight:900;margin-bottom:6px;text-shadow:0 2px 8px rgba(0,0,0,.3)}
+.hero-sub{font-size:14px;opacity:.85;margin-bottom:16px}
+.hero-emojis{font-size:28px;letter-spacing:6px;margin-bottom:14px}
+.hero-total{display:inline-block;background:#ffd700;color:#4a0e0a;border-radius:20px;padding:5px 20px;font-weight:900;font-size:15px}
+/* STICKY */
+.sticky-bar{position:sticky;top:0;z-index:100;background:linear-gradient(90deg,#4a0e0a,#7b241c);padding:10px 16px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;box-shadow:0 3px 12px rgba(0,0,0,.25)}
+.sticky-bar input{border:none;border-radius:8px;padding:6px 12px;font-size:13px;font-weight:600;min-width:90px;flex:1;background:rgba(255,255,255,.95)}
+.sticky-bar input::placeholder{color:#999}
+.sb-btn{border:none;border-radius:8px;padding:6px 14px;font-size:13px;font-weight:700;cursor:pointer}
+.btn-save{background:#27ae60;color:#fff}.btn-print{background:#e67e22;color:#fff}.btn-submit{background:#ffd700;color:#4a0e0a}
+/* DASHBOARD */
+.dashboard{background:linear-gradient(135deg,#4a0e0a,#7b241c);color:#fff;padding:22px 18px;margin:16px;border-radius:16px;box-shadow:0 6px 20px rgba(123,36,28,.3)}
+.dash-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:12px;margin-bottom:14px}
+.dash-box{background:rgba(255,255,255,.12);border-radius:12px;padding:12px 8px;text-align:center}
+.dash-num{font-size:28px;font-weight:900;line-height:1}
+.dash-lbl{font-size:11px;opacity:.75;margin-top:3px;font-weight:600;text-transform:uppercase;letter-spacing:.3px}
+.score-bar-wrap{background:rgba(255,255,255,.15);border-radius:20px;height:12px;margin-bottom:8px;overflow:hidden}
+.score-bar{height:100%;background:linear-gradient(90deg,#ffd700,#f39c12);border-radius:20px;transition:width .6s ease;width:0%}
+.sec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin-top:12px}
+.sec-pill{background:rgba(255,255,255,.1);border-radius:10px;padding:8px 10px;font-size:12px;font-weight:700}
+.sec-pill span{display:block;font-size:16px;font-weight:900;color:#ffd700}
+/* LAYOUT */
+.container{max-width:860px;margin:0 auto;padding:0 14px 40px}
+.section{background:var(--card);border-radius:16px;padding:22px 20px;margin-bottom:18px;box-shadow:0 2px 12px rgba(123,36,28,.08);border:1px solid var(--border)}
+.sec-header{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:12px;border-bottom:2px solid var(--border)}
+.sec-icon{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#7b241c,#c0392b);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.sec-title{font-size:18px;font-weight:800;color:#4a0e0a}
+.sec-marks{margin-left:auto;background:var(--p3);color:#4a0e0a;border-radius:20px;padding:3px 12px;font-size:12px;font-weight:700}
+h3{font-size:15px;font-weight:700;color:#4a0e0a;margin:14px 0 8px}
+h4{font-size:14px;font-weight:700;color:#7b241c;margin:10px 0 6px}
+p{margin-bottom:10px}
+/* READING */
+.reading-text{background:#fdf2f0;border-left:4px solid #7b241c;border-radius:0 12px 12px 0;padding:18px 20px;margin:12px 0;font-size:14.5px;line-height:1.85}
+.reading-text p{margin-bottom:12px}
+.hw{border-bottom:2px dotted #c0392b;cursor:help;position:relative;color:#4a0e0a;font-weight:600}
+.hw .tooltip{display:none;position:absolute;bottom:calc(100%+6px);left:0;background:#2c1a18;color:#fff;border-radius:8px;padding:8px 12px;font-size:12px;font-weight:400;width:240px;z-index:200;line-height:1.4;box-shadow:0 4px 12px rgba(0,0,0,.3)}
+.hw:hover .tooltip{display:block}
+/* GLOSSARY */
+.glossary{background:#fdf2f0;border:2px solid var(--border);border-radius:12px;padding:16px 18px;margin:12px 0}
+.glo-grid{display:grid;gap:8px}
+.glo-item{display:grid;grid-template-columns:130px 150px 50px 1fr;gap:6px;align-items:start;font-size:13px;border-bottom:1px solid #f5cdc9;padding-bottom:6px}
+.gw{font-weight:700;color:#4a0e0a}.gpron{color:#9c6b68;font-style:italic}.gpos{color:#7b241c;font-weight:600}
+@media(max-width:600px){.glo-item{grid-template-columns:1fr 1fr}.gpron,.gpos{display:none}}
+/* QUESTIONS */
+.qb{background:#fdf2f0;border:1px solid #f5cdc9;border-radius:12px;padding:14px 16px;margin-bottom:10px}
+.q-text{font-weight:600;margin-bottom:10px;font-size:14px}
+.mcq-opts,.tf-opts{display:flex;flex-wrap:wrap;gap:8px}
+.mcq-btn,.tf-btn{border:2px solid #7b241c;border-radius:8px;padding:7px 14px;background:#fff;cursor:pointer;font-size:13px;font-weight:600;transition:.2s;color:#4a0e0a}
+.mcq-btn:hover,.tf-btn:hover{background:#f5cdc9}
+.mcq-btn.correct-ans{background:#d5f5e3;border-color:#27ae60;color:#1e8449}
+.mcq-btn.wrong-ans{background:#fadbd8;border-color:#e74c3c;color:#c0392b}
+.true-btn{border-color:#27ae60;color:#1e8449}.false-btn{border-color:#c0392b;color:#c0392b}
+.tf-btn.correct-ans{background:#d5f5e3}.tf-btn.wrong-ans{background:#fadbd8}
+.auto-result{margin-top:8px;font-size:12px;font-weight:700;padding:4px 10px;border-radius:6px;display:inline-block}
+.auto-result.pending{background:#fde8e5;color:#7b241c}
+.auto-result.correct{background:#d5f5e3;color:#1e8449}
+.auto-result.wrong{background:#fadbd8;color:#c0392b}
+/* DROPDOWNS */
+.gsel{border:2px solid #7b241c;border-radius:8px;padding:6px 10px;font-size:13px;font-weight:600;color:#4a0e0a;background:#fff;cursor:pointer}
+.gsel:focus{outline:none;border-color:#4a0e0a}
+/* TEXTAREA */
+textarea{width:100%;border:2px solid var(--border);border-radius:10px;padding:12px;font-size:14px;font-family:inherit;resize:vertical;min-height:90px;transition:.2s}
+textarea:focus{outline:none;border-color:#7b241c;box-shadow:0 0 0 3px rgba(123,36,28,.12)}
+.score-input{width:80px;border:2px solid #7b241c;border-radius:8px;padding:5px 10px;font-size:14px;font-weight:700;text-align:center;color:#4a0e0a}
+.score-input:focus{outline:none;border-color:#4a0e0a}
+/* GRAMMAR BOX */
+.gram-box{background:linear-gradient(135deg,#fde8e5,#f5cdc9);border:2px solid #e5a49e;border-radius:14px;padding:18px 20px;margin:12px 0}
+.gram-table{width:100%;border-collapse:collapse;font-size:13px}
+.gram-table th{background:#7b241c;color:#fff;padding:8px 10px;text-align:left}
+.gram-table td{border-bottom:1px solid #f5cdc9;padding:8px 10px;vertical-align:top}
+.gram-table tr:nth-child(even) td{background:#fdf2f0}
+/* SONG */
+.song-box{background:linear-gradient(135deg,#fde8e5,#f5cdc9);border:2px solid #e5a49e;border-radius:14px;padding:20px;text-align:center;font-size:14px;line-height:2}
+/* INFO BOX */
+.info-box{background:#fff8e1;border-left:4px solid #f39c12;border-radius:0 10px 10px 0;padding:12px 16px;font-size:13px;margin:10px 0;color:#7d6608}
+/* DIALOGUE */
+.dialogue{background:#fdf2f0;border-radius:12px;padding:16px 18px;margin:10px 0}
+.dlg-row{display:flex;gap:12px;margin-bottom:10px;align-items:flex-start}
+.dlg-name{font-weight:700;color:#4a0e0a;min-width:80px;font-size:13px}
+.dlg-text{font-size:14px;background:#fff;border-radius:8px;padding:8px 12px;border:1px solid #f5cdc9;flex:1}
+/* AUDIO */
+.audio-wrap{background:linear-gradient(135deg,#4a0e0a,#7b241c);border-radius:14px;padding:20px 22px;margin-bottom:18px}
+/* EXCLAMATION TABLE */
+.excl-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+.excl-card{background:#fde8e5;border:2px solid #f5cdc9;border-radius:10px;padding:12px 14px}
+.excl-card .phrase{font-size:16px;font-weight:800;color:#7b241c;margin-bottom:4px}
+.excl-card .use{font-size:12px;color:#9c6b68}
+/* VOWEL GRID */
+.vowel-grid{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+.vowel-tile{width:56px;height:56px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:900;color:#fff}
+.vowel-tile.v{background:#c0392b}
+.vowel-tile.c{background:#bdc3c7;color:#555}
+/* SUBMIT */
+.submit-section{text-align:center;padding:30px 20px;background:linear-gradient(135deg,#4a0e0a,#7b241c);border-radius:16px;color:#fff;margin-bottom:20px}
+.submit-btn{background:#ffd700;color:#4a0e0a;border:none;border-radius:12px;padding:14px 36px;font-size:16px;font-weight:800;cursor:pointer;transition:.2s;box-shadow:0 4px 14px rgba(0,0,0,.2)}
+.submit-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.3)}
+@media print{.sticky-bar,.submit-section,.score-bar-wrap{display:none}body{background:#fff}.section{box-shadow:none;border:1px solid #ddd}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">📘 Grade 6 English · Nepal CDC · 2082 B.S.</div>
+    <h1>Unit 17: Expressing Surprise and Dismay</h1>
+    <div class="hero-sub">Shree Laxmi Secondary School · Interactive Worksheet</div>
+    <div class="hero-emojis">😲 🌴 🔮 📖 ✍️</div>
+    <div class="hero-total">🏆 Total Marks: 60</div>
+  </div>
+</div>
+
+<!-- STICKY BAR -->
+<div class="sticky-bar">
+  <input type="text" id="sName" placeholder="👤 Your Name" oninput="autoSave()">
+  <input type="text" id="sRoll" placeholder="🔢 Roll No." oninput="autoSave()">
+  <input type="date" id="sDate" oninput="autoSave()">
+  <button class="sb-btn btn-save" onclick="autoSave()">💾 Save</button>
+  <button class="sb-btn btn-print" onclick="window.print()">🖨️ Print</button>
+  <button class="sb-btn btn-submit" onclick="submitAll()">📤 Submit</button>
+</div>
+
+<!-- DASHBOARD -->
+<div class="container">
+<div class="dashboard">
+  <div class="dash-grid">
+    <div class="dash-box"><div class="dash-num" id="dObt">0</div><div class="dash-lbl">Obtained</div></div>
+    <div class="dash-box"><div class="dash-num">60</div><div class="dash-lbl">Total</div></div>
+    <div class="dash-box"><div class="dash-num" id="dPct">0%</div><div class="dash-lbl">Percentage</div></div>
+    <div class="dash-box"><div class="dash-num" id="dGrade">—</div><div class="dash-lbl">Grade</div></div>
+  </div>
+  <div class="score-bar-wrap"><div class="score-bar" id="dBar"></div></div>
+  <div class="sec-grid">
+    <div class="sec-pill">Getting Started<span id="ss_gs">0/3</span></div>
+    <div class="sec-pill">Reading I<span id="ss_r1">0/12</span></div>
+    <div class="sec-pill">Speaking<span id="ss_sp">0/4</span></div>
+    <div class="sec-pill">Listening<span id="ss_ls">0/7</span></div>
+    <div class="sec-pill">Grammar<span id="ss_gr">0/8</span></div>
+    <div class="sec-pill">Reading II<span id="ss_r2">0/6</span></div>
+    <div class="sec-pill">Writing<span id="ss_wr">0/10</span></div>
+    <div class="sec-pill">Project<span id="ss_pj">0/5</span></div>
+    <div class="sec-pill">Extra Bit<span id="ss_ex">0/5</span></div>
+  </div>
+</div>
+
+<!-- ===== GETTING STARTED ===== -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-icon">🎵</div>
+    <div class="sec-title">Getting Started</div>
+    <div class="sec-marks">3 Marks</div>
+  </div>
+
+  <h3>A. Look at the pictures and discuss:</h3>
+  <p style="color:#9c6b68;font-size:13px">Think about palm readers, Chitwan National Park, and past perfect events. What surprises you? 🗣️</p>
+
+  <h3>B. Listen and sing 🎶</h3>
+  <div class="song-box">
+    <p><em>Oh dear! Did you hear?</em></p>
+    <p><em>Have you ever heard such news before?</em></p>
+    <p><em>Here comes a man from far away,</em></p>
+    <p><em>Oh no! It can't be — what does he say?</em></p>
+  </div>
+
+  <h3>C. Warm-Up Questions (3 marks)</h3>
+
+  <div class="qb" data-id="gs_c1" data-ans="Oh no!" data-max="1">
+    <div class="q-text">1. Which phrase expresses dismay (sadness/disappointment)?</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'gs_c1','Wow!')">Wow!</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'gs_c1','Oh no!')">Oh no!</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'gs_c1','Great!')">Great!</button>
+    </div>
+    <input type="hidden" id="gs_c1">
+    <div class="auto-result pending" id="ar_gs_c1">⏳ Select an answer</div>
+  </div>
+
+  <div class="qb" data-id="gs_c2" data-ans="had + past participle" data-max="1">
+    <div class="q-text">2. What is the structure of the past perfect tense?</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'gs_c2','was/were + verb-ing')">was/were + verb-ing</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'gs_c2','had + past participle')">had + past participle</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'gs_c2','have/has + verb')">have/has + verb</button>
+    </div>
+    <input type="hidden" id="gs_c2">
+    <div class="auto-result pending" id="ar_gs_c2">⏳ Select an answer</div>
+  </div>
+
+  <div class="qb" data-id="gs_c3" data-ans="before" data-max="1">
+    <div class="q-text">3. The past perfect is used to show one action happened _______ another in the past.</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'gs_c3','after')">after</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'gs_c3','before')">before</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'gs_c3','during')">during</button>
+    </div>
+    <input type="hidden" id="gs_c3">
+    <div class="auto-result pending" id="ar_gs_c3">⏳ Select an answer</div>
+  </div>
+</div>
+
+<!-- ===== READING I ===== -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-icon">📖</div>
+    <div class="sec-title">Reading I — A Palm Reader</div>
+    <div class="sec-marks">12 Marks</div>
+  </div>
+
+  <h3>Pre-reading:</h3>
+  <p>a. Have you ever visited a palm reader or fortune teller? &nbsp; b. Do you believe in fate?</p>
+
+  <div class="reading-text">
+    <p>Once upon a time, there was a young man named Binod who lived in a small village near Pokhara. One day, Binod had gone to the market to sell some vegetables when he <span class="hw">noticed<span class="tooltip">noticed /ˈnəʊtɪst/ (v. past): saw or became aware of something</span></span> a large crowd gathered around an old man. The old man was reading the palms of people and telling them their future.</p>
+
+    <p>Binod was <span class="hw">curious<span class="tooltip">curious /ˈkjʊəriəs/ (adj.): eager to know or learn something; inquisitive</span></span> and waited in the queue. When his turn came, the palm reader took his hand and studied the lines carefully. After a long silence, the old man spoke in a <span class="hw">grave<span class="tooltip">grave /ɡreɪv/ (adj.): serious and worrying; giving cause for concern</span></span> voice.</p>
+
+    <p>"Young man," he said, "I see that you will face a great <span class="hw">misfortune<span class="tooltip">misfortune /mɪsˈfɔːtʃən/ (n.): bad luck; an unfortunate condition or event</span></span> before you turn thirty. But after that, great happiness awaits you."</p>
+
+    <p>Binod was shocked. He had never expected such news. He had <span class="hw">planned<span class="tooltip">planned /plænd/ (v. past): had arranged or intended to do something in advance</span></span> to marry his childhood sweetheart and open a small shop. Now, all those dreams seemed uncertain. He returned home in <span class="hw">silence<span class="tooltip">silence /ˈsaɪləns/ (n.): complete absence of sound; the state of being quiet</span></span>.</p>
+
+    <p>Days turned into weeks, and Binod could not <span class="hw">shake off<span class="tooltip">shake off (phrasal v.): to get rid of; to free oneself from a feeling or situation</span></span> the fear. He had stopped talking to friends and had <span class="hw">withdrawn<span class="tooltip">withdrawn /wɪðˈdrɔːn/ (adj./v. past part.): having pulled back or removed oneself from a situation</span></span> from social life. His mother noticed the change and asked him what had happened.</p>
+
+    <p>When Binod told his mother, she laughed gently. "My son," she said, "you have <span class="hw">forgotten<span class="tooltip">forgotten /fəˈɡɒtən/ (v. past part.): failed to remember; ceased to keep in mind</span></span> the most important thing. Our future is not written in our palms — it is shaped by our actions. No one can <span class="hw">predict<span class="tooltip">predict /prɪˈdɪkt/ (v.): to say what will happen in the future; to forecast</span></span> your destiny."</p>
+
+    <p>Binod felt as if a heavy burden had been lifted from his shoulders. He <span class="hw">realised<span class="tooltip">realised /ˈrɪəlaɪzd/ (v. past): became fully aware of or understood something</span></span> that he had wasted many days worrying about something uncertain. From that day on, he lived life with courage, and as the years passed, he <span class="hw">prospered<span class="tooltip">prospered /ˈprɒspəd/ (v. past): became successful; grew and developed well</span></span> greatly — not because of fate, but because of his hard work and determination.</p>
+  </div>
+
+  <div class="glossary">
+    <h4>📚 Glossary — Reading I</h4>
+    <div class="glo-grid">
+      <div class="glo-item"><span class="gw">noticed</span><span class="gpron">/ˈnəʊtɪst/</span><span class="gpos">v.</span><span>saw or became aware of something</span></div>
+      <div class="glo-item"><span class="gw">curious</span><span class="gpron">/ˈkjʊəriəs/</span><span class="gpos">adj.</span><span>eager to know or learn; inquisitive</span></div>
+      <div class="glo-item"><span class="gw">grave</span><span class="gpron">/ɡreɪv/</span><span class="gpos">adj.</span><span>serious and worrying</span></div>
+      <div class="glo-item"><span class="gw">misfortune</span><span class="gpron">/mɪsˈfɔːtʃən/</span><span class="gpos">n.</span><span>bad luck; an unfortunate event</span></div>
+      <div class="glo-item"><span class="gw">planned</span><span class="gpron">/plænd/</span><span class="gpos">v.</span><span>arranged or intended in advance</span></div>
+      <div class="glo-item"><span class="gw">silence</span><span class="gpron">/ˈsaɪləns/</span><span class="gpos">n.</span><span>complete absence of sound</span></div>
+      <div class="glo-item"><span class="gw">shake off</span><span class="gpron">phrasal v.</span><span class="gpos">v.</span><span>to get rid of a feeling or situation</span></div>
+      <div class="glo-item"><span class="gw">withdrawn</span><span class="gpron">/wɪðˈdrɔːn/</span><span class="gpos">adj.</span><span>pulled back from social life</span></div>
+      <div class="glo-item"><span class="gw">forgotten</span><span class="gpron">/fəˈɡɒtən/</span><span class="gpos">v.</span><span>failed to remember; ceased to keep in mind</span></div>
+      <div class="glo-item"><span class="gw">predict</span><span class="gpron">/prɪˈdɪkt/</span><span class="gpos">v.</span><span>to say what will happen in the future</span></div>
+      <div class="glo-item"><span class="gw">realised</span><span class="gpron">/ˈrɪəlaɪzd/</span><span class="gpos">v.</span><span>became fully aware of something</span></div>
+      <div class="glo-item"><span class="gw">prospered</span><span class="gpron">/ˈprɒspəd/</span><span class="gpos">v.</span><span>became successful; grew and developed well</span></div>
+    </div>
+  </div>
+
+  <h3>A. Match the words with meanings (2 marks)</h3>
+
+  <div class="qb" data-id="r1_a1" data-ans="bad luck" data-max="1">
+    <div class="q-text">1. <strong>misfortune</strong> means —</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a1','great success')">great success</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a1','bad luck')">bad luck</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a1','a long journey')">a long journey</button>
+    </div>
+    <input type="hidden" id="r1_a1">
+    <div class="auto-result pending" id="ar_r1_a1">⏳ Select an answer</div>
+  </div>
+
+  <div class="qb" data-id="r1_a2" data-ans="became successful" data-max="1">
+    <div class="q-text">2. <strong>prospered</strong> means —</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a2','became worried')">became worried</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a2','became successful')">became successful</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a2','forgot everything')">forgot everything</button>
+    </div>
+    <input type="hidden" id="r1_a2">
+    <div class="auto-result pending" id="ar_r1_a2">⏳ Select an answer</div>
+  </div>
+
+  <h3>B. True or False (4 marks)</h3>
+
+  <div class="qb" data-id="r1_b1" data-ans="True" data-max="1">
+    <div class="q-text">1. Binod was at the market when he saw the palm reader.</div>
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'r1_b1','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'r1_b1','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="r1_b1">
+    <div class="auto-result pending" id="ar_r1_b1">⏳ Select</div>
+  </div>
+
+  <div class="qb" data-id="r1_b2" data-ans="False" data-max="1">
+    <div class="q-text">2. The palm reader predicted great happiness before Binod turned thirty.</div>
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'r1_b2','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'r1_b2','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="r1_b2">
+    <div class="auto-result pending" id="ar_r1_b2">⏳ Select</div>
+  </div>
+
+  <div class="qb" data-id="r1_b3" data-ans="True" data-max="1">
+    <div class="q-text">3. Binod's mother told him that the future is shaped by our actions.</div>
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'r1_b3','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'r1_b3','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="r1_b3">
+    <div class="auto-result pending" id="ar_r1_b3">⏳ Select</div>
+  </div>
+
+  <div class="qb" data-id="r1_b4" data-ans="False" data-max="1">
+    <div class="q-text">4. Binod prospered because fate helped him, not his hard work.</div>
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'r1_b4','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'r1_b4','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="r1_b4">
+    <div class="auto-result pending" id="ar_r1_b4">⏳ Select</div>
+  </div>
+
+  <h3>C. Answer the questions (6 marks)</h3>
+  <div class="info-box">✍️ Write your answers carefully. (2 marks each)</div>
+
+  <p><strong>1. Why did Binod go to the market that day?</strong></p>
+  <textarea id="sc_r1c1" placeholder="Write your answer here..." oninput="updateDash()"></textarea>
+  <label>Score: <input type="number" class="score-input" id="sc_r1c1_m" min="0" max="2" placeholder="0–2" oninput="updateDash()"></label>
+
+  <p style="margin-top:12px"><strong>2. How did Binod's behaviour change after visiting the palm reader?</strong></p>
+  <textarea id="sc_r1c2" placeholder="Write your answer here..." oninput="updateDash()"></textarea>
+  <label>Score: <input type="number" class="score-input" id="sc_r1c2_m" min="0" max="2" placeholder="0–2" oninput="updateDash()"></label>
+
+  <p style="margin-top:12px"><strong>3. What lesson did Binod learn from his mother? Do you agree? Why?</strong></p>
+  <textarea id="sc_r1c3" placeholder="Write your answer here..." oninput="updateDash()"></textarea>
+  <label>Score: <input type="number" class="score-input" id="sc_r1c3_m" min="0" max="2" placeholder="0–2" oninput="updateDash()"></label>
+</div>
+
+<!-- ===== SPEAKING ===== -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-icon">🗣️</div>
+    <div class="sec-title">Speaking — Surprise &amp; Dismay</div>
+    <div class="sec-marks">4 Marks</div>
+  </div>
+
+  <h3>A. Expressions for Surprise and Dismay</h3>
+  <div class="excl-grid">
+    <div class="excl-card"><div class="phrase">Wow! / Oh wow!</div><div class="use">Pleasant surprise</div></div>
+    <div class="excl-card"><div class="phrase">Oh no! / Oh dear!</div><div class="use">Dismay / bad news</div></div>
+    <div class="excl-card"><div class="phrase">Really? / Is that so?</div><div class="use">Mild surprise</div></div>
+    <div class="excl-card"><div class="phrase">I can't believe it!</div><div class="use">Strong surprise</div></div>
+    <div class="excl-card"><div class="phrase">What a shame!</div><div class="use">Sympathy / dismay</div></div>
+    <div class="excl-card"><div class="phrase">You must be kidding!</div><div class="use">Disbelief / surprise</div></div>
+  </div>
+
+  <h3>B. Study the dialogue from the audio</h3>
+  <div class="dialogue">
+    <div class="dlg-row"><div class="dlg-name">Santa:</div><div class="dlg-text">Hi, do you know I went to Chitwan last weekend?</div></div>
+    <div class="dlg-row"><div class="dlg-name">Friend:</div><div class="dlg-text"><strong>Wonderful!</strong> Who did you go with?</div></div>
+    <div class="dlg-row"><div class="dlg-name">Santa:</div><div class="dlg-text">I went with my sister.</div></div>
+    <div class="dlg-row"><div class="dlg-name">Friend:</div><div class="dlg-text"><strong>You must be kidding!</strong> You went with your sister? Somebody else might have gone with you.</div></div>
+    <div class="dlg-row"><div class="dlg-name">Santa:</div><div class="dlg-text">No, just two of us. <strong>It was incredible.</strong></div></div>
+    <div class="dlg-row"><div class="dlg-name">Friend:</div><div class="dlg-text"><strong>Wow!</strong> You know, I've never been there.</div></div>
+    <div class="dlg-row"><div class="dlg-name">Santa:</div><div class="dlg-text"><strong>Really? It's surprising.</strong> You must go there once.</div></div>
+  </div>
+
+  <h3>C. Choose the correct expression (2 marks)</h3>
+
+  <div class="qb" data-id="sp_b1" data-ans="Oh no!" data-max="1">
+    <div class="q-text">1. Your friend tells you he lost his wallet. You say —</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'sp_b1','Wow!')">Wow!</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'sp_b1','Oh no!')">Oh no!</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'sp_b1','Wonderful!')">Wonderful!</button>
+    </div>
+    <input type="hidden" id="sp_b1">
+    <div class="auto-result pending" id="ar_sp_b1">⏳ Select an answer</div>
+  </div>
+
+  <div class="qb" data-id="sp_b2" data-ans="You must be kidding!" data-max="1">
+    <div class="q-text">2. Your friend says he climbed Mt. Everest last weekend. You say —</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'sp_b2','What a shame!')">What a shame!</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'sp_b2','Oh dear!')">Oh dear!</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'sp_b2','You must be kidding!')">You must be kidding!</button>
+    </div>
+    <input type="hidden" id="sp_b2">
+    <div class="auto-result pending" id="ar_sp_b2">⏳ Select an answer</div>
+  </div>
+
+  <h3>D. Speaking Task (2 marks)</h3>
+  <p>Write a short dialogue (4–5 lines) between two friends. One friend shares surprising news and the other expresses surprise or dismay. Use at least 2 expressions from the table above.</p>
+  <textarea id="sc_sp" placeholder="Write your dialogue here..." oninput="updateDash()"></textarea>
+  <label>Score: <input type="number" class="score-input" id="sc_sp_m" min="0" max="2" placeholder="0–2" oninput="updateDash()"></label>
+</div>
+
+<!-- ===== LISTENING ===== -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-icon">🎧</div>
+    <div class="sec-title">Listening — A Trip to Chitwan</div>
+    <div class="sec-marks">7 Marks</div>
+  </div>
+
+  <div class="audio-wrap">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+      <div style="width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:22px">🎧</div>
+      <div>
+        <div style="color:#fff;font-weight:800;font-size:15px;margin-bottom:2px">Listening — Trip to Chitwan</div>
+        <div style="color:rgba(255,255,255,.65);font-size:12px;font-weight:600">Unit 17 · Grade 6 English · Click ▶ to play</div>
+      </div>
+    </div>
+    <audio controls style="width:100%;border-radius:10px;outline:none" controlsList="nodownload">
+      <source src="unit17-listening.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-top:10px;font-size:12px;color:rgba(255,255,255,.6);font-weight:600">
+      <span>🔊 Use headphones for best experience</span><span>🔁 Listen as many times as needed!</span>
+    </div>
+  </div>
+
+  <h3>A. Pre-Listening</h3>
+  <p>a. Have you ever been to Chitwan? &nbsp; b. What is Chitwan famous for? &nbsp; c. Who would you like to travel with?</p>
+
+  <h3>B. Listen and choose the correct answer (4 marks)</h3>
+
+  <div class="qb" data-id="ls_b1" data-ans="last weekend" data-max="1">
+    <div class="q-text">1. Santa went to Chitwan —</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'ls_b1','last year')">last year</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'ls_b1','last weekend')">last weekend</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'ls_b1','last month')">last month</button>
+    </div>
+    <input type="hidden" id="ls_b1">
+    <div class="auto-result pending" id="ar_ls_b1">⏳ Select an answer</div>
+  </div>
+
+  <div class="qb" data-id="ls_b2" data-ans="his sister" data-max="1">
+    <div class="q-text">2. Santa went to Chitwan with —</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'ls_b2','his friends')">his friends</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'ls_b2','his sister')">his sister</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'ls_b2','his parents')">his parents</button>
+    </div>
+    <input type="hidden" id="ls_b2">
+    <div class="auto-result pending" id="ar_ls_b2">⏳ Select an answer</div>
+  </div>
+
+  <div class="qb" data-id="ls_b3" data-ans="Bishazari Tal" data-max="1">
+    <div class="q-text">3. Besides Chitwan National Park, Santa also visited —</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'ls_b3','Rara Lake')">Rara Lake</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'ls_b3','Bishazari Tal')">Bishazari Tal</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'ls_b3','Phewa Lake')">Phewa Lake</button>
+    </div>
+    <input type="hidden" id="ls_b3">
+    <div class="auto-result pending" id="ar_ls_b3">⏳ Select an answer</div>
+  </div>
+
+  <div class="qb" data-id="ls_b4" data-ans="False" data-max="1">
+    <div class="q-text">4. Santa's friend had already been to Chitwan before. True or False?</div>
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'ls_b4','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'ls_b4','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="ls_b4">
+    <div class="auto-result pending" id="ar_ls_b4">⏳ Select</div>
+  </div>
+
+  <h3>C. Listen again and answer (3 marks)</h3>
+
+  <p><strong>1. Why is Santa's maternal home in Chitwan significant in the conversation?</strong></p>
+  <textarea id="sc_ls1" placeholder="Write your answer..." oninput="updateDash()" style="min-height:60px"></textarea>
+  <label>Score: <input type="number" class="score-input" id="sc_ls1_m" min="0" max="1" placeholder="0–1" oninput="updateDash()"></label>
+
+  <p style="margin-top:10px"><strong>2. What expressions of surprise did Santa's friend use? Write any two.</strong></p>
+  <textarea id="sc_ls2" placeholder="Write the expressions..." oninput="updateDash()" style="min-height:60px"></textarea>
+  <label>Score: <input type="number" class="score-input" id="sc_ls2_m" min="0" max="2" placeholder="0–2" oninput="updateDash()"></label>
+</div>
+
+<!-- ===== GRAMMAR ===== -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-icon">📐</div>
+    <div class="sec-title">Grammar — Past Perfect Tense</div>
+    <div class="sec-marks">8 Marks</div>
+  </div>
+
+  <div class="gram-box">
+    <h4>📌 Past Perfect — Rules</h4>
+    <table class="gram-table">
+      <tr><th>Form</th><th>Use</th><th>Example</th></tr>
+      <tr><td><strong>had + past participle</strong></td><td>Action completed BEFORE another past action</td><td>By the time I arrived, she <em>had left</em>.</td></tr>
+      <tr><td>Negative: <strong>had not (hadn't) + pp</strong></td><td>Something had not happened before another past event</td><td>He <em>hadn't eaten</em> when she called.</td></tr>
+      <tr><td>Question: <strong>Had + subject + pp?</strong></td><td>Asking about action before another past event</td><td><em>Had</em> you <em>finished</em> before he came?</td></tr>
+    </table>
+    <p style="margin-top:10px;font-size:13px;color:#4a0e0a"><strong>💡 Key words:</strong> before, after, already, just, never, by the time, when, once</p>
+    <div style="margin-top:10px;background:#fff;border-radius:10px;padding:12px;font-size:13px">
+      <strong>Timeline:</strong> Past Perfect ← → Past Simple ← → Now<br>
+      <em>"He had slept when she arrived."</em> — sleeping happened first ✅
+    </div>
+  </div>
+
+  <h3>A. Choose the correct form (4 marks)</h3>
+
+  <div class="qb" data-id="gr_a1">
+    <div class="q-text">1. By the time the teacher came, the students _______ (finish) their work.</div>
+    <select class="gsel" id="gr_a1" onchange="checkGram('gr_a1','had finished',1)">
+      <option value="">Choose…</option>
+      <option>finished</option>
+      <option>had finished</option>
+      <option>were finishing</option>
+    </select>
+    <div class="auto-result pending" id="ar_gr_a1">⏳ Choose above</div>
+  </div>
+
+  <div class="qb" data-id="gr_a2">
+    <div class="q-text">2. She was angry because she _______ (wait) for two hours.</div>
+    <select class="gsel" id="gr_a2" onchange="checkGram('gr_a2','had waited',1)">
+      <option value="">Choose…</option>
+      <option>waited</option>
+      <option>has waited</option>
+      <option>had waited</option>
+    </select>
+    <div class="auto-result pending" id="ar_gr_a2">⏳ Choose above</div>
+  </div>
+
+  <div class="qb" data-id="gr_a3">
+    <div class="q-text">3. I _______ (never/visit) Chitwan before last year.</div>
+    <select class="gsel" id="gr_a3" onchange="checkGram('gr_a3','had never visited',1)">
+      <option value="">Choose…</option>
+      <option>never visited</option>
+      <option>had never visited</option>
+      <option>have never visited</option>
+    </select>
+    <div class="auto-result pending" id="ar_gr_a3">⏳ Choose above</div>
+  </div>
+
+  <div class="qb" data-id="gr_a4">
+    <div class="q-text">4. After Binod _______ (hear) the palm reader, he went home quietly.</div>
+    <select class="gsel" id="gr_a4" onchange="checkGram('gr_a4','had heard',1)">
+      <option value="">Choose…</option>
+      <option>heard</option>
+      <option>had heard</option>
+      <option>was hearing</option>
+    </select>
+    <div class="auto-result pending" id="ar_gr_a4">⏳ Choose above</div>
+  </div>
+
+  <h3>B. Join sentences using Past Perfect (4 marks)</h3>
+  <div class="info-box">Example: She ate dinner. Then her friend arrived. → She <strong>had eaten</strong> dinner before her friend arrived.</div>
+
+  <p style="margin-top:10px"><strong>1.</strong> Binod went to market. Then he saw the palm reader. (by the time)</p>
+  <textarea id="sc_gr1" placeholder="Rewrite using 'by the time' and past perfect..." oninput="updateDash()" style="min-height:55px"></textarea>
+  <label>Score: <input type="number" class="score-input" id="sc_gr1_m" min="0" max="1" placeholder="0–1" oninput="updateDash()"></label>
+
+  <p style="margin-top:10px"><strong>2.</strong> The players ran after a ball. They entered the ground first. (after)</p>
+  <textarea id="sc_gr2" placeholder="Rewrite using 'after' and past perfect..." oninput="updateDash()" style="min-height:55px"></textarea>
+  <label>Score: <input type="number" class="score-input" id="sc_gr2_m" min="0" max="1" placeholder="0–1" oninput="updateDash()"></label>
+
+  <p style="margin-top:10px"><strong>3.</strong> She studied hard. She passed the exam. (because)</p>
+  <textarea id="sc_gr3" placeholder="Rewrite using 'because' and past perfect..." oninput="updateDash()" style="min-height:55px"></textarea>
+  <label>Score: <input type="number" class="score-input" id="sc_gr3_m" min="0" max="1" placeholder="0–1" oninput="updateDash()"></label>
+
+  <p style="margin-top:10px"><strong>4.</strong> I lost my book. I could not do homework. (since)</p>
+  <textarea id="sc_gr4" placeholder="Rewrite using 'since' and past perfect..." oninput="updateDash()" style="min-height:55px"></textarea>
+  <label>Score: <input type="number" class="score-input" id="sc_gr4_m" min="0" max="1" placeholder="0–1" oninput="updateDash()"></label>
+</div>
+
+<!-- ===== READING II ===== -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-icon">📜</div>
+    <div class="sec-title">Reading II — A Conversation (Surprising News)</div>
+    <div class="sec-marks">6 Marks</div>
+  </div>
+
+  <h3>Pre-reading: What kind of news surprises you most?</h3>
+
+  <div class="reading-text">
+    <div class="dialogue" style="background:#fff;border:none;padding:0">
+      <div class="dlg-row"><div class="dlg-name">Priya:</div><div class="dlg-text">Suman! Have you heard the news? Our school has been selected for the national science competition!</div></div>
+      <div class="dlg-row"><div class="dlg-name">Suman:</div><div class="dlg-text"><span class="hw">I can't believe it<span class="tooltip">I can't believe it: a common expression of great surprise or disbelief</span></span>! Really? When did you find out?</div></div>
+      <div class="dlg-row"><div class="dlg-name">Priya:</div><div class="dlg-text">Just this morning. The principal announced it in the assembly. He said our project on solar energy had <span class="hw">impressed<span class="tooltip">impressed /ɪmˈprest/ (v. past): made someone feel admiration and respect</span></span> the judges greatly.</div></div>
+      <div class="dlg-row"><div class="dlg-name">Suman:</div><div class="dlg-text"><span class="hw">Wow<span class="tooltip">Wow: an exclamation expressing surprise or admiration</span></span>, that's incredible! I had worked on that project for three weeks. I never thought it would go this far.</div></div>
+      <div class="dlg-row"><div class="dlg-name">Priya:</div><div class="dlg-text">I know! And the competition is in Kathmandu next month. We'll get to stay in a hotel!</div></div>
+      <div class="dlg-row"><div class="dlg-name">Suman:</div><div class="dlg-text">Oh dear, I haven't told my parents yet. They'll be so <span class="hw">thrilled<span class="tooltip">thrilled /θrɪld/ (adj.): extremely pleased and excited</span></span>!</div></div>
+      <div class="dlg-row"><div class="dlg-name">Priya:</div><div class="dlg-text">Go tell them right away! By the time you get home, I'll have already called mine.</div></div>
+      <div class="dlg-row"><div class="dlg-name">Suman:</div><div class="dlg-text">This is the best news I've heard all year. I'm so <span class="hw">grateful<span class="tooltip">grateful /ˈɡreɪtfəl/ (adj.): feeling or showing thanks for something received</span></span>!</div></div>
+    </div>
+  </div>
+
+  <div class="glossary">
+    <h4>📚 Glossary — Reading II</h4>
+    <div class="glo-grid">
+      <div class="glo-item"><span class="gw">impressed</span><span class="gpron">/ɪmˈprest/</span><span class="gpos">v.</span><span>made someone feel admiration and respect</span></div>
+      <div class="glo-item"><span class="gw">incredible</span><span class="gpron">/ɪnˈkredɪbl/</span><span class="gpos">adj.</span><span>impossible to believe; amazingly good</span></div>
+      <div class="glo-item"><span class="gw">thrilled</span><span class="gpron">/θrɪld/</span><span class="gpos">adj.</span><span>extremely pleased and excited</span></div>
+      <div class="glo-item"><span class="gw">grateful</span><span class="gpron">/ˈɡreɪtfəl/</span><span class="gpos">adj.</span><span>feeling or showing thanks</span></div>
+      <div class="glo-item"><span class="gw">selected</span><span class="gpron">/sɪˈlektɪd/</span><span class="gpos">v.</span><span>chosen from a group</span></div>
+      <div class="glo-item"><span class="gw">announced</span><span class="gpron">/əˈnaʊnst/</span><span class="gpos">v.</span><span>made something known publicly</span></div>
+    </div>
+  </div>
+
+  <h3>A. Choose the correct answer (2 marks)</h3>
+
+  <div class="qb" data-id="r2_a1" data-ans="national science competition" data-max="1">
+    <div class="q-text">1. The school was selected for a —</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a1','sports championship')">sports championship</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a1','national science competition')">national science competition</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a1','singing contest')">singing contest</button>
+    </div>
+    <input type="hidden" id="r2_a1">
+    <div class="auto-result pending" id="ar_r2_a1">⏳ Select an answer</div>
+  </div>
+
+  <div class="qb" data-id="r2_a2" data-ans="solar energy" data-max="1">
+    <div class="q-text">2. The winning project was about —</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a2','water pollution')">water pollution</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a2','solar energy')">solar energy</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a2','recycling')">recycling</button>
+    </div>
+    <input type="hidden" id="r2_a2">
+    <div class="auto-result pending" id="ar_r2_a2">⏳ Select an answer</div>
+  </div>
+
+  <h3>B. Answer the questions (4 marks)</h3>
+
+  <p><strong>1. Find two expressions of surprise from the conversation and write them.</strong></p>
+  <textarea id="sc_r2b1" placeholder="Write the expressions of surprise..." oninput="updateDash()" style="min-height:60px"></textarea>
+  <label>Score: <input type="number" class="score-input" id="sc_r2b1_m" min="0" max="2" placeholder="0–2" oninput="updateDash()"></label>
+
+  <p style="margin-top:10px"><strong>2. How long had Suman worked on the project? Why is the past perfect used here?</strong></p>
+  <textarea id="sc_r2b2" placeholder="Write your answer..." oninput="updateDash()" style="min-height:60px"></textarea>
+  <label>Score: <input type="number" class="score-input" id="sc_r2b2_m" min="0" max="2" placeholder="0–2" oninput="updateDash()"></label>
+</div>
+
+<!-- ===== WRITING ===== -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-icon">✍️</div>
+    <div class="sec-title">Writing</div>
+    <div class="sec-marks">10 Marks</div>
+  </div>
+
+  <div class="info-box">📝 Rubric: Content (2) + Organisation (1) + Language (1) + Accuracy (1) = 5 marks each</div>
+
+  <h3>A. Writing Task 1 — Compose a Dialogue (5 marks)</h3>
+  <p>Write a dialogue (8–10 lines) between two friends. One friend has just returned from an exciting trip and is sharing news. The other friend reacts with surprise, dismay, or disbelief. Use at least 3 expressions of surprise/dismay and one past perfect sentence.</p>
+  <textarea id="sc_wr1" placeholder="Write your dialogue here..." oninput="updateDash()" style="min-height:180px"></textarea>
+  <label>Score: <input type="number" class="score-input" id="sc_wr1_m" min="0" max="5" placeholder="0–5" oninput="updateDash()"></label>
+
+  <h3 style="margin-top:20px">B. Writing Task 2 — A Paragraph on a Surprising Event (5 marks)</h3>
+  <p>Write a paragraph (6–8 sentences) about the most surprising event you have experienced or heard about. Use past simple, past continuous, and past perfect tenses. Include expressions of surprise.</p>
+  <textarea id="sc_wr2" placeholder="Write about your surprising event here..." oninput="updateDash()" style="min-height:180px"></textarea>
+  <label>Score: <input type="number" class="score-input" id="sc_wr2_m" min="0" max="5" placeholder="0–5" oninput="updateDash()"></label>
+</div>
+
+<!-- ===== PROJECT WORK ===== -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-icon">🔬</div>
+    <div class="sec-title">Project Work</div>
+    <div class="sec-marks">5 Marks</div>
+  </div>
+
+  <p>😲 <strong>Surprising Facts Collection!</strong></p>
+  <p>Find 5 surprising or amazing facts about Nepal (nature, history, culture, sports, or people). Write each fact as a sentence using the past perfect or past simple. Then share them with your class.</p>
+  <p><em>Example: "By the time Nepal became a republic in 2008, it had been a monarchy for more than 240 years."</em></p>
+
+  <textarea id="sc_pj" placeholder="Write your 5 surprising facts about Nepal here (one per line)..." oninput="updateDash()" style="min-height:180px"></textarea>
+  <label>Score: <input type="number" class="score-input" id="sc_pj_m" min="0" max="5" placeholder="0–5" oninput="updateDash()"></label>
+</div>
+
+<!-- ===== EXTRA BIT ===== -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-icon">💡</div>
+    <div class="sec-title">Extra Bit — Vowels</div>
+    <div class="sec-marks">5 Marks</div>
+  </div>
+
+  <div class="gram-box">
+    <h4>🔤 What are Vowels?</h4>
+    <p style="font-size:14px;margin-bottom:12px">There are <strong>5 vowels</strong> in the English alphabet: <strong>A, E, I, O, U</strong>. Vowels are sounds made with an <em>open mouth</em> — the air flows freely without being blocked.</p>
+
+    <div class="vowel-grid">
+      <div class="vowel-tile v">A</div>
+      <div class="vowel-tile v">E</div>
+      <div class="vowel-tile v">I</div>
+      <div class="vowel-tile v">O</div>
+      <div class="vowel-tile v">U</div>
+    </div>
+
+    <table class="gram-table" style="margin-top:12px">
+      <tr><th>Vowel</th><th>Short sound</th><th>Long sound</th><th>Examples</th></tr>
+      <tr><td><strong>A</strong></td><td>/æ/ as in c<u>a</u>t</td><td>/eɪ/ as in c<u>a</u>ke</td><td>apple, able, ant, ate</td></tr>
+      <tr><td><strong>E</strong></td><td>/e/ as in b<u>e</u>d</td><td>/iː/ as in m<u>e</u></td><td>egg, even, end, eat</td></tr>
+      <tr><td><strong>I</strong></td><td>/ɪ/ as in s<u>i</u>t</td><td>/aɪ/ as in k<u>i</u>te</td><td>ink, ice, in, island</td></tr>
+      <tr><td><strong>O</strong></td><td>/ɒ/ as in d<u>o</u>t</td><td>/əʊ/ as in g<u>o</u></td><td>odd, open, ox, over</td></tr>
+      <tr><td><strong>U</strong></td><td>/ʌ/ as in c<u>u</u>p</td><td>/juː/ as in c<u>u</u>be</td><td>up, use, umbrella, uncle</td></tr>
+    </table>
+    <p style="margin-top:10px;font-size:13px;color:#4a0e0a"><strong>⚠️ Note:</strong> The letter <strong>Y</strong> can sometimes act as a vowel (e.g., <em>gym, sky, baby</em>) — but it is officially a consonant.</p>
+  </div>
+
+  <h3>A. Vowel identification (2 marks)</h3>
+
+  <div class="qb" data-id="ex_a1" data-ans="5" data-max="1">
+    <div class="q-text">1. How many vowels are there in the English alphabet?</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'ex_a1','4')">4</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'ex_a1','5')">5</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'ex_a1','6')">6</button>
+    </div>
+    <input type="hidden" id="ex_a1">
+    <div class="auto-result pending" id="ar_ex_a1">⏳ Select an answer</div>
+  </div>
+
+  <div class="qb" data-id="ex_a2" data-ans="open" data-max="1">
+    <div class="q-text">2. Vowel sounds are made with an _______ mouth.</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'ex_a2','closed')">closed</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'ex_a2','open')">open</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'ex_a2','tight')">tight</button>
+    </div>
+    <input type="hidden" id="ex_a2">
+    <div class="auto-result pending" id="ar_ex_a2">⏳ Select an answer</div>
+  </div>
+
+  <h3>B. Count the vowels in each word (3 marks)</h3>
+
+  <div class="qb" data-id="ex_b1">
+    <div class="q-text">1. How many vowels are in the word <strong>SURPRISING</strong>?</div>
+    <select class="gsel" id="ex_b1" onchange="checkGram('ex_b1','4',1)">
+      <option value="">Choose…</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+    <div class="auto-result pending" id="ar_ex_b1">⏳ Choose above</div>
+  </div>
+
+  <div class="qb" data-id="ex_b2">
+    <div class="q-text">2. Which vowels appear in the word <strong>EDUCATION</strong>?</div>
+    <select class="gsel" id="ex_b2" onchange="checkGram('ex_b2','E, U, A, I, O',1)">
+      <option value="">Choose…</option>
+      <option>E, U, A, I, O</option>
+      <option>E, A, I, O</option>
+      <option>A, E, I, O, U</option>
+    </select>
+    <div class="auto-result pending" id="ar_ex_b2">⏳ Choose above</div>
+  </div>
+
+  <div class="qb" data-id="ex_b3">
+    <div class="q-text">3. The word <strong>SKY</strong> — the letter Y here acts as a —</div>
+    <select class="gsel" id="ex_b3" onchange="checkGram('ex_b3','vowel',1)">
+      <option value="">Choose…</option>
+      <option>consonant</option>
+      <option>vowel</option>
+      <option>neither</option>
+    </select>
+    <div class="auto-result pending" id="ar_ex_b3">⏳ Choose above</div>
+  </div>
+</div>
+
+<!-- SUBMIT -->
+<div class="submit-section">
+  <h3 style="margin-bottom:8px;font-size:20px">🎉 Amazing Work! Ready to Submit?</h3>
+  <p style="opacity:.85;margin-bottom:16px;font-size:14px">Check your Name, Roll No., and Date before submitting! 📋</p>
+  <button class="submit-btn" onclick="submitAll()">📤 Submit to Teacher</button>
+</div>
+</div>
+
+<script>
+const SHEETS_URL='https://script.google.com/macros/s/AKfycbwAp1ILg-kioVPzBITrTat0bnLgGgmMZBbaOdDMtVtSJE_W3vYjKqR-8mjM9FrREONk/exec';
+const autoScores={};
+
+const MANUAL_SC=[
+  'sc_r1c1_m','sc_r1c2_m','sc_r1c3_m',
+  'sc_sp_m',
+  'sc_ls1_m','sc_ls2_m',
+  'sc_gr1_m','sc_gr2_m','sc_gr3_m','sc_gr4_m',
+  'sc_r2b1_m','sc_r2b2_m',
+  'sc_wr1_m','sc_wr2_m',
+  'sc_pj_m'
+];
+
+const AUTO_IDS=[
+  'gs_c1','gs_c2','gs_c3',
+  'r1_a1','r1_a2',
+  'r1_b1','r1_b2','r1_b3','r1_b4',
+  'sp_b1','sp_b2',
+  'ls_b1','ls_b2','ls_b3','ls_b4',
+  'gr_a1','gr_a2','gr_a3','gr_a4',
+  'r2_a1','r2_a2',
+  'ex_a1','ex_a2',
+  'ex_b1','ex_b2','ex_b3'
+];
+
+const SEC={
+  gs:{auto:['gs_c1','gs_c2','gs_c3'],sc:[],max:3,sv:'ss_gs'},
+  r1:{auto:['r1_a1','r1_a2','r1_b1','r1_b2','r1_b3','r1_b4'],sc:['sc_r1c1_m','sc_r1c2_m','sc_r1c3_m'],max:12,sv:'ss_r1'},
+  sp:{auto:['sp_b1','sp_b2'],sc:['sc_sp_m'],max:4,sv:'ss_sp'},
+  ls:{auto:['ls_b1','ls_b2','ls_b3','ls_b4'],sc:['sc_ls1_m','sc_ls2_m'],max:7,sv:'ss_ls'},
+  gr:{auto:['gr_a1','gr_a2','gr_a3','gr_a4'],sc:['sc_gr1_m','sc_gr2_m','sc_gr3_m','sc_gr4_m'],max:8,sv:'ss_gr'},
+  r2:{auto:['r2_a1','r2_a2'],sc:['sc_r2b1_m','sc_r2b2_m'],max:6,sv:'ss_r2'},
+  wr:{auto:[],sc:['sc_wr1_m','sc_wr2_m'],max:10,sv:'ss_wr'},
+  pj:{auto:[],sc:['sc_pj_m'],max:5,sv:'ss_pj'},
+  ex:{auto:['ex_a1','ex_a2','ex_b1','ex_b2','ex_b3'],sc:[],max:5,sv:'ss_ex'}
+};
+
+function selMCQ(btn,fid,val){
+  const qb=btn.closest('.qb');
+  qb.querySelectorAll('.mcq-btn').forEach(b=>b.classList.remove('correct-ans','wrong-ans'));
+  document.getElementById(fid).value=val;
+  const correct=qb.dataset.ans,max=parseFloat(qb.dataset.max||1),ar=document.getElementById('ar_'+fid);
+  if(val===correct){btn.classList.add('correct-ans');ar.textContent='✅ Correct! +'+max;ar.className='auto-result correct';autoScores[fid]=max;}
+  else{btn.classList.add('wrong-ans');ar.textContent='❌ Incorrect. Answer: '+correct;ar.className='auto-result wrong';autoScores[fid]=0;}
+  updateDash();
+}
+
+function selTF(btn,fid,val){
+  const qb=btn.closest('.qb');
+  qb.querySelectorAll('.tf-btn').forEach(b=>b.classList.remove('correct-ans','wrong-ans'));
+  document.getElementById(fid).value=val;
+  const correct=qb.dataset.ans,max=parseFloat(qb.dataset.max||1),ar=document.getElementById('ar_'+fid);
+  if(val===correct){btn.classList.add('correct-ans');ar.textContent='✅ Correct! +'+max;ar.className='auto-result correct';autoScores[fid]=max;}
+  else{btn.classList.add('wrong-ans');ar.textContent='❌ Incorrect. Answer: '+correct;ar.className='auto-result wrong';autoScores[fid]=0;}
+  updateDash();
+}
+
+function checkGram(fid,correct,max){
+  const val=document.getElementById(fid).value,ar=document.getElementById('ar_'+fid);
+  if(!val)return;
+  if(val.toLowerCase().trim()===correct.toLowerCase().trim()){ar.textContent='✅ Correct! +'+max;ar.className='auto-result correct';autoScores[fid]=max;}
+  else{ar.textContent='❌ Incorrect. Answer: '+correct;ar.className='auto-result wrong';autoScores[fid]=0;}
+  updateDash();
+}
+
+function updateDash(){
+  let total=0;
+  MANUAL_SC.forEach(id=>{total+=parseFloat(document.getElementById(id)?.value)||0;});
+  AUTO_IDS.forEach(id=>{total+=autoScores[id]||0;});
+  total=Math.min(60,Math.round(total*10)/10);
+  document.getElementById('dObt').textContent=total;
+  const pct=Math.round((total/60)*100);
+  document.getElementById('dPct').textContent=pct+'%';
+  document.getElementById('dBar').style.width=pct+'%';
+  const grades=[[90,'A+'],[80,'A'],[70,'B+'],[60,'B'],[50,'C+'],[40,'C'],[35,'D'],[0,'E']];
+  let g='E';for(const[t,gr]of grades){if(pct>=t){g=gr;break;}}
+  document.getElementById('dGrade').textContent=g;
+  for(const[key,s]of Object.entries(SEC)){
+    let st=0;
+    s.auto.forEach(id=>st+=autoScores[id]||0);
+    s.sc.forEach(id=>st+=parseFloat(document.getElementById(id)?.value)||0);
+    st=Math.min(s.max,Math.round(st*10)/10);
+    document.getElementById(s.sv).textContent=st+'/'+s.max;
+  }
+  autoSave();
+}
+
+function gatherData(){
+  const d={unit:'Unit 17',name:document.getElementById('sName').value,roll:document.getElementById('sRoll').value,
+    date:document.getElementById('sDate').value,total:document.getElementById('dObt').textContent,
+    pct:document.getElementById('dPct').textContent,grade:document.getElementById('dGrade').textContent};
+  AUTO_IDS.forEach(id=>{d['ans_'+id]=document.getElementById(id)?.value||'';d['sc_'+id]=autoScores[id]||0;});
+  ['sc_r1c1','sc_r1c2','sc_r1c3','sc_sp','sc_ls1','sc_ls2',
+   'sc_gr1','sc_gr2','sc_gr3','sc_gr4','sc_r2b1','sc_r2b2','sc_wr1','sc_wr2','sc_pj'].forEach(id=>{
+    d[id]=document.getElementById(id)?.value||'';});
+  MANUAL_SC.forEach(id=>{d[id]=document.getElementById(id)?.value||'';});
+  return d;
+}
+
+function autoSave(){try{localStorage.setItem('unit17_data',JSON.stringify(gatherData()));}catch(e){}}
+
+function loadSave(){
+  try{
+    const s=localStorage.getItem('unit17_data');if(!s)return;
+    const d=JSON.parse(s);
+    if(d.name)document.getElementById('sName').value=d.name;
+    if(d.roll)document.getElementById('sRoll').value=d.roll;
+    if(d.date)document.getElementById('sDate').value=d.date;
+    MANUAL_SC.forEach(id=>{if(d[id]!==undefined){const el=document.getElementById(id);if(el)el.value=d[id];}});
+    ['sc_r1c1','sc_r1c2','sc_r1c3','sc_sp','sc_ls1','sc_ls2',
+     'sc_gr1','sc_gr2','sc_gr3','sc_gr4','sc_r2b1','sc_r2b2','sc_wr1','sc_wr2','sc_pj'].forEach(id=>{
+      if(d[id]!==undefined){const el=document.getElementById(id);if(el)el.value=d[id];}});
+    updateDash();
+  }catch(e){}
+}
+
+function submitAll(){
+  const name=document.getElementById('sName').value.trim();
+  if(!name){alert('⚠️ Please enter your name before submitting!');return;}
+  fetch(SHEETS_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(gatherData())})
+    .then(()=>alert('✅ Submitted! Great work, '+name+'! 🎉'))
+    .catch(()=>alert('⚠️ No connection. Please try again.'));
+}
+
+window.onload=function(){
+  loadSave();
+  const today=new Date().toISOString().split('T')[0];
+  if(!document.getElementById('sDate').value)document.getElementById('sDate').value=today;
+};
+</script>
+</body>
+</html>

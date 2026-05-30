@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 15 – Expressing Degrees of Probability | Grade 6 English</title>
+<style>
+:root{--p:#6c3483;--p2:#9b59b6;--p3:#d7bde2;--bg:#f8f4fc;--card:#fff;--border:#e1d5f0;--text:#2c2c2c;--muted:#777;--green:#1e8449;--red:#c0392b;--gold:#d4ac0d;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.7}
+/* HERO */
+.hero{background:linear-gradient(135deg,#4a0e6e,#6c3483,#9b59b6);color:#fff;padding:40px 20px 32px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat}
+.hero-inner{position:relative;max-width:800px;margin:0 auto}
+.hero-badge{display:inline-block;background:rgba(255,255,255,.2);border:2px solid rgba(255,255,255,.4);border-radius:30px;padding:4px 18px;font-size:13px;font-weight:700;letter-spacing:.5px;margin-bottom:12px}
+.hero h1{font-size:clamp(22px,5vw,36px);font-weight:900;margin-bottom:6px;text-shadow:0 2px 8px rgba(0,0,0,.3)}
+.hero-sub{font-size:14px;opacity:.85;margin-bottom:16px}
+.hero-emojis{font-size:28px;letter-spacing:6px;margin-bottom:14px}
+.hero-total{display:inline-block;background:#ffd700;color:#4a0e6e;border-radius:20px;padding:5px 20px;font-weight:900;font-size:15px}
+/* STICKY */
+.sticky-bar{position:sticky;top:0;z-index:100;background:linear-gradient(90deg,#4a0e6e,#6c3483);padding:10px 16px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;box-shadow:0 3px 12px rgba(0,0,0,.25)}
+.sticky-bar input{border:none;border-radius:8px;padding:6px 12px;font-size:13px;font-weight:600;min-width:90px;flex:1;background:rgba(255,255,255,.95)}
+.sticky-bar input::placeholder{color:#999}
+.sb-btn{border:none;border-radius:8px;padding:6px 14px;font-size:13px;font-weight:700;cursor:pointer;transition:.2s}
+.btn-save{background:#27ae60;color:#fff}.btn-print{background:#e67e22;color:#fff}.btn-submit{background:#ffd700;color:#4a0e6e}
+/* DASHBOARD */
+.dashboard{background:linear-gradient(135deg,#4a0e6e,#6c3483);color:#fff;padding:22px 18px;margin:16px;border-radius:16px;box-shadow:0 6px 20px rgba(108,52,131,.3)}
+.dash-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:12px;margin-bottom:14px}
+.dash-box{background:rgba(255,255,255,.12);border-radius:12px;padding:12px 8px;text-align:center}
+.dash-num{font-size:28px;font-weight:900;line-height:1}
+.dash-lbl{font-size:11px;opacity:.75;margin-top:3px;font-weight:600;text-transform:uppercase;letter-spacing:.3px}
+.score-bar-wrap{background:rgba(255,255,255,.15);border-radius:20px;height:12px;margin-bottom:8px;overflow:hidden}
+.score-bar{height:100%;background:linear-gradient(90deg,#ffd700,#f39c12);border-radius:20px;transition:width .6s ease;width:0%}
+.sec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin-top:12px}
+.sec-pill{background:rgba(255,255,255,.1);border-radius:10px;padding:8px 10px;font-size:12px;font-weight:700}
+.sec-pill span{display:block;font-size:16px;font-weight:900;color:#ffd700}
+/* LAYOUT */
+.container{max-width:860px;margin:0 auto;padding:0 14px 40px}
+.section{background:var(--card);border-radius:16px;padding:22px 20px;margin-bottom:18px;box-shadow:0 2px 12px rgba(108,52,131,.08);border:1px solid var(--border)}
+.sec-header{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:12px;border-bottom:2px solid var(--border)}
+.sec-icon{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#6c3483,#9b59b6);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.sec-title{font-size:18px;font-weight:800;color:#4a0e6e}
+.sec-marks{margin-left:auto;background:var(--p3);color:#4a0e6e;border-radius:20px;padding:3px 12px;font-size:12px;font-weight:700}
+h3{font-size:15px;font-weight:700;color:#4a0e6e;margin:14px 0 8px}
+h4{font-size:14px;font-weight:700;color:#6c3483;margin:10px 0 6px}
+p{margin-bottom:10px}
+/* READING */
+.reading-text{background:#faf7ff;border-left:4px solid #6c3483;border-radius:0 12px 12px 0;padding:18px 20px;margin:12px 0;font-size:14.5px;line-height:1.85}
+.reading-text p{margin-bottom:12px}
+.hw{border-bottom:2px dotted #9b59b6;cursor:help;position:relative;color:#4a0e6e;font-weight:600}
+.hw .tooltip{display:none;position:absolute;bottom:calc(100% + 6px);left:0;background:#2c2c2c;color:#fff;border-radius:8px;padding:8px 12px;font-size:12px;font-weight:400;width:240px;z-index:200;line-height:1.4;box-shadow:0 4px 12px rgba(0,0,0,.3)}
+.hw:hover .tooltip{display:block}
+/* GLOSSARY */
+.glossary{background:#f9f4ff;border:2px solid var(--border);border-radius:12px;padding:16px 18px;margin:12px 0}
+.glossary h4{color:#4a0e6e;margin-bottom:10px}
+.glo-grid{display:grid;gap:8px}
+.glo-item{display:grid;grid-template-columns:130px 150px 50px 1fr;gap:6px;align-items:start;font-size:13px;border-bottom:1px solid #ecdff7;padding-bottom:6px}
+.gw{font-weight:700;color:#4a0e6e}.gpron{color:#777;font-style:italic}.gpos{color:#9b59b6;font-weight:600}
+@media(max-width:600px){.glo-item{grid-template-columns:1fr 1fr;}.gpron,.gpos{display:none}}
+/* QUESTIONS */
+.qb{background:#f9f4ff;border:1px solid #d7bde2;border-radius:12px;padding:14px 16px;margin-bottom:10px}
+.q-text{font-weight:600;margin-bottom:10px;font-size:14px}
+.mcq-opts,.tf-opts{display:flex;flex-wrap:wrap;gap:8px}
+.mcq-btn,.tf-btn{border:2px solid #9b59b6;border-radius:8px;padding:7px 14px;background:#fff;cursor:pointer;font-size:13px;font-weight:600;transition:.2s;color:#4a0e6e}
+.mcq-btn:hover,.tf-btn:hover{background:#e8d5f5}
+.mcq-btn.correct-ans{background:#d5f5e3;border-color:#27ae60;color:#1e8449}
+.mcq-btn.wrong-ans{background:#fadbd8;border-color:#e74c3c;color:#c0392b}
+.true-btn{border-color:#27ae60;color:#1e8449}.false-btn{border-color:#c0392b;color:#c0392b}
+.tf-btn.correct-ans{background:#d5f5e3}.tf-btn.wrong-ans{background:#fadbd8}
+.auto-result{margin-top:8px;font-size:12px;font-weight:700;padding:4px 10px;border-radius:6px;display:inline-block}
+.auto-result.pending{background:#f0e6ff;color:#6c3483}
+.auto-result.correct{background:#d5f5e3;color:#1e8449}
+.auto-result.wrong{background:#fadbd8;color:#c0392b}
+/* DROPDOWNS */
+.gsel{border:2px solid #9b59b6;border-radius:8px;padding:6px 10px;font-size:13px;font-weight:600;color:#4a0e6e;background:#fff;cursor:pointer}
+.gsel:focus{outline:none;border-color:#4a0e6e}
+/* TEXTAREA */
+textarea{width:100%;border:2px solid var(--border);border-radius:10px;padding:12px;font-size:14px;font-family:inherit;resize:vertical;min-height:90px;transition:.2s}
+textarea:focus{outline:none;border-color:#6c3483;box-shadow:0 0 0 3px rgba(108,52,131,.12)}
+.score-input{width:80px;border:2px solid #9b59b6;border-radius:8px;padding:5px 10px;font-size:14px;font-weight:700;text-align:center;color:#4a0e6e}
+.score-input:focus{outline:none;border-color:#4a0e6e}
+/* POEM */
+.poem-box{background:linear-gradient(135deg,#f9f4ff,#f0e6ff);border:2px solid #d7bde2;border-radius:14px;padding:20px 24px;font-style:italic;line-height:2;font-size:14px}
+.poem-box p{margin-bottom:8px}
+/* GRAMMAR BOX */
+.gram-box{background:linear-gradient(135deg,#f3e5ff,#e8d5f5);border:2px solid #9b59b6;border-radius:14px;padding:18px 20px;margin:12px 0}
+.gram-box h4{color:#4a0e6e;margin-bottom:10px}
+.gram-table{width:100%;border-collapse:collapse;font-size:13px}
+.gram-table th{background:#6c3483;color:#fff;padding:8px 10px;text-align:left}
+.gram-table td{border-bottom:1px solid #d7bde2;padding:8px 10px;vertical-align:top}
+.gram-table tr:nth-child(even) td{background:#f9f4ff}
+/* SONG */
+.song-box{background:linear-gradient(135deg,#fdf2ff,#f5e6ff);border:2px solid #d7bde2;border-radius:14px;padding:20px;text-align:center;font-size:14px;line-height:2}
+/* INFO BOX */
+.info-box{background:#fff8e1;border-left:4px solid #f39c12;border-radius:0 10px 10px 0;padding:12px 16px;font-size:13px;margin:10px 0;color:#7d6608}
+/* DIALOGUE */
+.dialogue{background:#f9f4ff;border-radius:12px;padding:16px 18px;margin:10px 0}
+.dlg-row{display:flex;gap:12px;margin-bottom:10px;align-items:flex-start}
+.dlg-name{font-weight:700;color:#4a0e6e;min-width:80px;font-size:13px}
+.dlg-text{font-size:14px;background:#fff;border-radius:8px;padding:8px 12px;border:1px solid #d7bde2;flex:1}
+/* AUDIO */
+.audio-wrap{background:linear-gradient(135deg,#4a0e6e,#6c3483);border-radius:14px;padding:20px 22px;margin-bottom:18px}
+/* SUBMIT */
+.submit-section{text-align:center;padding:30px 20px;background:linear-gradient(135deg,#4a0e6e,#6c3483);border-radius:16px;color:#fff;margin-bottom:20px}
+.submit-btn{background:#ffd700;color:#4a0e6e;border:none;border-radius:12px;padding:14px 36px;font-size:16px;font-weight:800;cursor:pointer;transition:.2s;box-shadow:0 4px 14px rgba(0,0,0,.2)}
+.submit-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.3)}
+/* PRINT */
+@media print{.sticky-bar,.submit-section,.score-bar-wrap,.hero-badge{display:none}body{background:#fff}.section{box-shadow:none;border:1px solid #ddd}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">📘 Grade 6 English · Nepal CDC · 2082 B.S.</div>
+    <h1>Unit 15: Expressing Degrees of Probability</h1>
+    <div class="hero-sub">Shree Laxmi Secondary School · Interactive Worksheet</div>
+    <div class="hero-emojis">🎶 🌦️ 📻 🧠 ✍️</div>
+    <div class="hero-total">🏆 Total Marks: 60</div>
+  </div>
+</div>
+
+<!-- STICKY BAR -->
+<div class="sticky-bar">
+  <input type="text" id="sName" placeholder="👤 Your Name" oninput="autoSave()">
+  <input type="text" id="sRoll" placeholder="🔢 Roll No." oninput="autoSave()">
+  <input type="date" id="sDate" oninput="autoSave()">
+  <button class="sb-btn btn-save" onclick="autoSave()">💾 Save</button>
+  <button class="sb-btn btn-print" onclick="window.print()">🖨️ Print</button>
+  <button class="sb-btn btn-submit" onclick="submitAll()">📤 Submit</button>
+</div>
+
+<!-- DASHBOARD -->
+<div class="container">
+<div class="dashboard">
+  <div class="dash-grid">
+    <div class="dash-box"><div class="dash-num" id="dObt">0</div><div class="dash-lbl">Obtained</div></div>
+    <div class="dash-box"><div class="dash-num">60</div><div class="dash-lbl">Total</div></div>
+    <div class="dash-box"><div class="dash-num" id="dPct">0%</div><div class="dash-lbl">Percentage</div></div>
+    <div class="dash-box"><div class="dash-num" id="dGrade">—</div><div class="dash-lbl">Grade</div></div>
+  </div>
+  <div class="score-bar-wrap"><div class="score-bar" id="dBar"></div></div>
+  <div class="sec-grid">
+    <div class="sec-pill">Getting Started<span id="ss_gs">0/3</span></div>
+    <div class="sec-pill">Reading I<span id="ss_r1">0/12</span></div>
+    <div class="sec-pill">Speaking<span id="ss_sp">0/4</span></div>
+    <div class="sec-pill">Listening<span id="ss_ls">0/7</span></div>
+    <div class="sec-pill">Grammar<span id="ss_gr">0/8</span></div>
+    <div class="sec-pill">Reading II<span id="ss_r2">0/6</span></div>
+    <div class="sec-pill">Writing<span id="ss_wr">0/10</span></div>
+    <div class="sec-pill">Project<span id="ss_pj">0/5</span></div>
+    <div class="sec-pill">Extra Bit<span id="ss_ex">0/5</span></div>
+  </div>
+</div>
+
+<!-- ===== GETTING STARTED ===== -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-icon">🎵</div>
+    <div class="sec-title">Getting Started</div>
+    <div class="sec-marks">3 Marks</div>
+  </div>
+
+  <h3>A. Look at the pictures and discuss:</h3>
+  <p style="color:#666;font-size:13px">Think about weather forecasts, predictions, and probability. Discuss with friends!</p>
+
+  <h3>B. Listen and sing 🎶</h3>
+  <div class="song-box">
+    <p><em>"Perhaps the wind will blow today,</em></p>
+    <p><em>Perhaps the sun will shine.</em></p>
+    <p><em>Perhaps it's going to be a fine day,</em></p>
+    <p><em>Perhaps the weather will be divine!"</em></p>
+  </div>
+
+  <h3>C. Warm-Up Questions (3 marks)</h3>
+
+  <div class="qb" data-id="gs_c1" data-ans="Weather forecast" data-max="1">
+    <div class="q-text">1. What type of topic do meteorologists usually talk about?</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'gs_c1','History of Nepal')">History of Nepal</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'gs_c1','Weather forecast')">Weather forecast</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'gs_c1','Cooking recipes')">Cooking recipes</button>
+    </div>
+    <input type="hidden" id="gs_c1">
+    <div class="auto-result pending" id="ar_gs_c1">⏳ Select an answer</div>
+  </div>
+
+  <div class="qb" data-id="gs_c2" data-ans="maybe/perhaps" data-max="1">
+    <div class="q-text">2. Which words do we use when we are NOT sure about something?</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'gs_c2','always/never')">always/never</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'gs_c2','maybe/perhaps')">maybe/perhaps</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'gs_c2','must/have to')">must/have to</button>
+    </div>
+    <input type="hidden" id="gs_c2">
+    <div class="auto-result pending" id="ar_gs_c2">⏳ Select an answer</div>
+  </div>
+
+  <div class="qb" data-id="gs_c3" data-ans="may" data-max="1">
+    <div class="q-text">3. Which modal verb expresses possibility?</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'gs_c3','must')">must</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'gs_c3','may')">may</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'gs_c3','should')">should</button>
+    </div>
+    <input type="hidden" id="gs_c3">
+    <div class="auto-result pending" id="ar_gs_c3">⏳ Select an answer</div>
+  </div>
+</div>
+
+<!-- ===== READING I ===== -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-icon">📖</div>
+    <div class="sec-title">Reading I — The Musicians of Ilam</div>
+    <div class="sec-marks">12 Marks</div>
+  </div>
+
+  <h3>Pre-reading questions:</h3>
+  <p>a. Have you ever heard folk music? &nbsp; b. What instruments are used in folk music? &nbsp; c. Where is Ilam located?</p>
+
+  <div class="reading-text">
+    <p>Ilam is a beautiful hill district in the eastern part of Nepal. It is famous for its <span class="hw">lush<span class="tooltip">lush /lʌʃ/ (adj.): growing thickly and strongly; very green and healthy</span></span> green tea gardens, rolling hills, and pleasant climate. But Ilam is not just famous for tea. It is also home to some of Nepal's most <span class="hw">talented<span class="tooltip">talented /ˈtæləntɪd/ (adj.): having a natural ability to do something well</span></span> folk musicians.</p>
+
+    <p>In the villages of Ilam, you may hear the sweet sounds of the <span class="hw">sarangi<span class="tooltip">sarangi (n.): a traditional Nepali string instrument played with a bow, often associated with the Gandharba community</span></span>, the madal, and the flute. These instruments are <span class="hw">integral<span class="tooltip">integral /ˈɪntɪɡrəl/ (adj.): essential; necessary as a part of a whole</span></span> to the culture of the people there. The Gandharba community, who are <span class="hw">renowned<span class="tooltip">renowned /rɪˈnaʊnd/ (adj.): known and admired by many people; famous</span></span> for their musical skills, have been playing and singing folk songs for generations.</p>
+
+    <p>One <span class="hw">legendary<span class="tooltip">legendary /ˈledʒəndri/ (adj.): very famous and admired, especially from the past</span></span> musician from Ilam was Chakra Bahadur. He could play the sarangi with <span class="hw">extraordinary<span class="tooltip">extraordinary /ɪkˈstrɔːdɪnri/ (adj.): very unusual or remarkable; beyond what is ordinary</span></span> skill. It is said that when he played, even the birds would stop singing to listen. His music told stories of love, nature, sorrow and joy. People from nearby villages would <span class="hw">gather<span class="tooltip">gather /ˈɡæðər/ (v.): to come together in a group; to collect</span></span> around him to listen for hours.</p>
+
+    <p>Today, the <span class="hw">tradition<span class="tooltip">tradition /trəˈdɪʃən/ (n.): a custom or way of doing something that has been passed down through generations</span></span> of folk music in Ilam may be at risk. Many young people are moving to cities and may not learn these traditional arts. However, some <span class="hw">enthusiastic<span class="tooltip">enthusiastic /ɪnˌθjuːziˈæstɪk/ (adj.): showing great excitement and interest</span></span> groups are working to keep this tradition alive. They might open music schools and perhaps hold festivals to <span class="hw">preserve<span class="tooltip">preserve /prɪˈzɜːv/ (v.): to keep something in its original state or in good condition</span></span> this beautiful heritage.</p>
+
+    <p>Perhaps one day, the music of Ilam will be known throughout the world. The musicians believe that music must be shared. It must not be allowed to disappear. As long as one person plays the sarangi in Ilam, the tradition will <span class="hw">survive<span class="tooltip">survive /səˈvaɪv/ (v.): to continue to live or exist, especially after danger</span></span>.</p>
+  </div>
+
+  <div class="glossary">
+    <h4>📚 Glossary — Reading I</h4>
+    <div class="glo-grid">
+      <div class="glo-item"><span class="gw">lush</span><span class="gpron">/lʌʃ/</span><span class="gpos">adj.</span><span>growing thickly and strongly; very green</span></div>
+      <div class="glo-item"><span class="gw">talented</span><span class="gpron">/ˈtæləntɪd/</span><span class="gpos">adj.</span><span>having natural ability</span></div>
+      <div class="glo-item"><span class="gw">sarangi</span><span class="gpron">sarangi</span><span class="gpos">n.</span><span>traditional Nepali string instrument</span></div>
+      <div class="glo-item"><span class="gw">integral</span><span class="gpron">/ˈɪntɪɡrəl/</span><span class="gpos">adj.</span><span>essential; necessary as part of a whole</span></div>
+      <div class="glo-item"><span class="gw">renowned</span><span class="gpron">/rɪˈnaʊnd/</span><span class="gpos">adj.</span><span>famous and admired by many people</span></div>
+      <div class="glo-item"><span class="gw">legendary</span><span class="gpron">/ˈledʒəndri/</span><span class="gpos">adj.</span><span>very famous, especially from the past</span></div>
+      <div class="glo-item"><span class="gw">extraordinary</span><span class="gpron">/ɪkˈstrɔːdɪnri/</span><span class="gpos">adj.</span><span>very unusual or remarkable</span></div>
+      <div class="glo-item"><span class="gw">tradition</span><span class="gpron">/trəˈdɪʃən/</span><span class="gpos">n.</span><span>custom passed down through generations</span></div>
+      <div class="glo-item"><span class="gw">enthusiastic</span><span class="gpron">/ɪnˌθjuːziˈæstɪk/</span><span class="gpos">adj.</span><span>showing great excitement and interest</span></div>
+      <div class="glo-item"><span class="gw">preserve</span><span class="gpron">/prɪˈzɜːv/</span><span class="gpos">v.</span><span>to keep in original state or good condition</span></div>
+      <div class="glo-item"><span class="gw">survive</span><span class="gpron">/səˈvaɪv/</span><span class="gpos">v.</span><span>to continue to exist after danger</span></div>
+      <div class="glo-item"><span class="gw">heritage</span><span class="gpron">/ˈherɪtɪdʒ/</span><span class="gpos">n.</span><span>things inherited from previous generations</span></div>
+    </div>
+  </div>
+
+  <h3>A. Match the words with their meanings (2 marks)</h3>
+
+  <div class="qb" data-id="r1_a1" data-ans="famous and admired" data-max="1">
+    <div class="q-text">1. <strong>renowned</strong> means —</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a1','growing thickly')">growing thickly</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a1','famous and admired')">famous and admired</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a1','to keep safe')">to keep safe</button>
+    </div>
+    <input type="hidden" id="r1_a1">
+    <div class="auto-result pending" id="ar_r1_a1">⏳ Select an answer</div>
+  </div>
+
+  <div class="qb" data-id="r1_a2" data-ans="to keep in its original state" data-max="1">
+    <div class="q-text">2. <strong>preserve</strong> means —</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a2','to come together')">to come together</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a2','very remarkable')">very remarkable</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r1_a2','to keep in its original state')">to keep in its original state</button>
+    </div>
+    <input type="hidden" id="r1_a2">
+    <div class="auto-result pending" id="ar_r1_a2">⏳ Select an answer</div>
+  </div>
+
+  <h3>B. True or False (4 marks)</h3>
+
+  <div class="qb" data-id="r1_b1" data-ans="True" data-max="1">
+    <div class="q-text">1. Ilam is famous for its tea gardens.</div>
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'r1_b1','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'r1_b1','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="r1_b1">
+    <div class="auto-result pending" id="ar_r1_b1">⏳ Select</div>
+  </div>
+
+  <div class="qb" data-id="r1_b2" data-ans="False" data-max="1">
+    <div class="q-text">2. Chakra Bahadur played the madal.</div>
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'r1_b2','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'r1_b2','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="r1_b2">
+    <div class="auto-result pending" id="ar_r1_b2">⏳ Select</div>
+  </div>
+
+  <div class="qb" data-id="r1_b3" data-ans="True" data-max="1">
+    <div class="q-text">3. The Gandharba community is known for their musical skills.</div>
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'r1_b3','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'r1_b3','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="r1_b3">
+    <div class="auto-result pending" id="ar_r1_b3">⏳ Select</div>
+  </div>
+
+  <div class="qb" data-id="r1_b4" data-ans="False" data-max="1">
+    <div class="q-text">4. Folk music in Ilam is growing stronger every year.</div>
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'r1_b4','True')">✅ TRUE</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'r1_b4','False')">❌ FALSE</button>
+    </div>
+    <input type="hidden" id="r1_b4">
+    <div class="auto-result pending" id="ar_r1_b4">⏳ Select</div>
+  </div>
+
+  <h3>C. Answer the following questions (6 marks)</h3>
+  <div class="info-box">✍️ Write your answers in the text boxes below. (2 marks each)</div>
+
+  <p><strong>1. What is the Gandharba community known for?</strong></p>
+  <textarea id="sc_r1c1" placeholder="Write your answer here..." oninput="updateDash()"></textarea>
+  <label>Score: <input type="number" class="score-input" id="sc_r1c1_m" min="0" max="2" placeholder="0–2" oninput="updateDash()"></label>
+
+  <p style="margin-top:12px"><strong>2. Why might folk music in Ilam be at risk?</strong></p>
+  <textarea id="sc_r1c2" placeholder="Write your answer here..." oninput="updateDash()"></textarea>
+  <label>Score: <input type="number" class="score-input" id="sc_r1c2_m" min="0" max="2" placeholder="0–2" oninput="updateDash()"></label>
+
+  <p style="margin-top:12px"><strong>3. What are people doing to preserve the music tradition of Ilam?</strong></p>
+  <textarea id="sc_r1c3" placeholder="Write your answer here..." oninput="updateDash()"></textarea>
+  <label>Score: <input type="number" class="score-input" id="sc_r1c3_m" min="0" max="2" placeholder="0–2" oninput="updateDash()"></label>
+</div>
+
+<!-- ===== SPEAKING ===== -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-icon">🗣️</div>
+    <div class="sec-title">Speaking — Expressing Probability</div>
+    <div class="sec-marks">4 Marks</div>
+  </div>
+
+  <h3>A. Study the dialogue</h3>
+  <div class="dialogue">
+    <div class="dlg-row"><div class="dlg-name">Anita:</div><div class="dlg-text">Look at those dark clouds! What do you think will happen?</div></div>
+    <div class="dlg-row"><div class="dlg-name">Rajan:</div><div class="dlg-text">It may rain soon. We should take an umbrella.</div></div>
+    <div class="dlg-row"><div class="dlg-name">Anita:</div><div class="dlg-text">Do you think the match will be cancelled?</div></div>
+    <div class="dlg-row"><div class="dlg-name">Rajan:</div><div class="dlg-text">It might be. Perhaps we should wait and see.</div></div>
+    <div class="dlg-row"><div class="dlg-name">Anita:</div><div class="dlg-text">Maybe we should call the organiser first.</div></div>
+  </div>
+
+  <h3>B. Match expressions to their probability level (2 marks)</h3>
+
+  <div class="qb" data-id="sp_b1" data-ans="100% certain" data-max="1">
+    <div class="q-text">1. "It <strong>must</strong> be cold up there — it's snowing!" expresses —</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'sp_b1','50% possible')">50% possible</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'sp_b1','100% certain')">100% certain (deduction)</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'sp_b1','very unlikely')">very unlikely</button>
+    </div>
+    <input type="hidden" id="sp_b1">
+    <div class="auto-result pending" id="ar_sp_b1">⏳ Select an answer</div>
+  </div>
+
+  <div class="qb" data-id="sp_b2" data-ans="less certain than may" data-max="1">
+    <div class="q-text">2. "<strong>Might</strong>" compared to "may" is —</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'sp_b2','more certain than may')">more certain than may</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'sp_b2','less certain than may')">less certain than may</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'sp_b2','exactly the same')">exactly the same</button>
+    </div>
+    <input type="hidden" id="sp_b2">
+    <div class="auto-result pending" id="ar_sp_b2">⏳ Select an answer</div>
+  </div>
+
+  <h3>C. Speaking Task (2 marks)</h3>
+  <p>Look at the situations and write what you would say using <em>may / might / must / perhaps / maybe</em>.</p>
+  <p><strong>Situation:</strong> Your friend hasn't arrived for the class yet. What do you say?</p>
+  <textarea id="sc_sp" placeholder="Write a sentence or two using may/might/must/perhaps/maybe..." oninput="updateDash()"></textarea>
+  <label>Score: <input type="number" class="score-input" id="sc_sp_m" min="0" max="2" placeholder="0–2" oninput="updateDash()"></label>
+</div>
+
+<!-- ===== LISTENING ===== -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-icon">🎧</div>
+    <div class="sec-title">Listening — Weather Forecast with Dr. Ali</div>
+    <div class="sec-marks">7 Marks</div>
+  </div>
+
+  <div class="audio-wrap">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+      <div style="width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:22px">🎧</div>
+      <div>
+        <div style="color:#fff;font-weight:800;font-size:15px;margin-bottom:2px">Listening — Weather Forecast</div>
+        <div style="color:rgba(255,255,255,.65);font-size:12px;font-weight:600">Unit 15 · Grade 6 English · Click ▶ to play</div>
+      </div>
+    </div>
+    <audio controls style="width:100%;border-radius:10px;outline:none" controlsList="nodownload">
+      <source src="unit15-listening.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-top:10px;font-size:12px;color:rgba(255,255,255,.6);font-weight:600">
+      <span>🔊 Use headphones for best experience</span><span>🔁 Listen as many times as needed!</span>
+    </div>
+  </div>
+
+  <h3>A. Pre-Listening Questions</h3>
+  <p>a. What is a meteorologist? &nbsp; b. Have you ever watched a weather forecast on TV?</p>
+
+  <h3>B. Listen and choose the correct answer (4 marks)</h3>
+
+  <div class="qb" data-id="ls_b1" data-ans="meteorologist" data-max="1">
+    <div class="q-text">1. Dr. Ali is a well-known —</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'ls_b1','musician')">musician</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'ls_b1','meteorologist')">meteorologist</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'ls_b1','doctor')">doctor</button>
+    </div>
+    <input type="hidden" id="ls_b1">
+    <div class="auto-result pending" id="ar_ls_b1">⏳ Select an answer</div>
+  </div>
+
+  <div class="qb" data-id="ls_b2" data-ans="most districts" data-max="1">
+    <div class="q-text">2. The weather tomorrow will improve in —</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'ls_b2','the Terai only')">the Terai only</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'ls_b2','most districts')">most districts</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'ls_b2','Kathmandu only')">Kathmandu only</button>
+    </div>
+    <input type="hidden" id="ls_b2">
+    <div class="auto-result pending" id="ar_ls_b2">⏳ Select an answer</div>
+  </div>
+
+  <div class="qb" data-id="ls_b3" data-ans="sunny" data-max="1">
+    <div class="q-text">3. The Terai will have _______ days for a week.</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'ls_b3','rainy')">rainy</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'ls_b3','cloudy')">cloudy</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'ls_b3','sunny')">sunny</button>
+    </div>
+    <input type="hidden" id="ls_b3">
+    <div class="auto-result pending" id="ar_ls_b3">⏳ Select an answer</div>
+  </div>
+
+  <div class="qb" data-id="ls_b4" data-ans="No" data-max="1">
+    <div class="q-text">4. Is there any probability of rain at the weekend?</div>
+    <div class="tf-opts">
+      <button class="tf-btn true-btn" onclick="selTF(this,'ls_b4','Yes')">✅ YES</button>
+      <button class="tf-btn false-btn" onclick="selTF(this,'ls_b4','No')">❌ NO</button>
+    </div>
+    <input type="hidden" id="ls_b4">
+    <div class="auto-result pending" id="ar_ls_b4">⏳ Select</div>
+  </div>
+
+  <h3>C. Listen again and answer (3 marks)</h3>
+
+  <p><strong>1. Which districts may face rain by tomorrow afternoon?</strong></p>
+  <textarea id="sc_ls1" placeholder="Write your answer..." oninput="updateDash()" style="min-height:60px"></textarea>
+  <label>Score: <input type="number" class="score-input" id="sc_ls1_m" min="0" max="1" placeholder="0–1" oninput="updateDash()"></label>
+
+  <p style="margin-top:10px"><strong>2. What two phrases does Dr. Ali use to express probability?</strong></p>
+  <textarea id="sc_ls2" placeholder="Write your answer..." oninput="updateDash()" style="min-height:60px"></textarea>
+  <label>Score: <input type="number" class="score-input" id="sc_ls2_m" min="0" max="2" placeholder="0–2" oninput="updateDash()"></label>
+</div>
+
+<!-- ===== GRAMMAR ===== -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-icon">📐</div>
+    <div class="sec-title">Grammar — may / might / must (Probability)</div>
+    <div class="sec-marks">8 Marks</div>
+  </div>
+
+  <div class="gram-box">
+    <h4>📌 Grammar Rule: Expressing Degrees of Probability</h4>
+    <table class="gram-table">
+      <tr><th>Modal</th><th>Meaning</th><th>Example</th></tr>
+      <tr><td><strong>may</strong></td><td>50% possible (more certain)</td><td>It <strong>may</strong> rain this evening.</td></tr>
+      <tr><td><strong>might</strong></td><td>less certain possibility</td><td>She <strong>might</strong> come tomorrow.</td></tr>
+      <tr><td><strong>must</strong></td><td>almost certain (logical deduction)</td><td>He studied hard. He <strong>must</strong> be tired.</td></tr>
+      <tr><td><strong>perhaps / maybe</strong></td><td>adverbs of probability</td><td><strong>Perhaps</strong> she is at home.</td></tr>
+    </table>
+    <p style="margin-top:10px;font-size:13px;color:#4a0e6e"><strong>💡 Remember:</strong> may > might (may is more certain). <em>must</em> here is about deduction, NOT obligation!</p>
+  </div>
+
+  <h3>A. Choose the correct modal verb (4 marks)</h3>
+
+  <div class="qb" data-id="gr_a1">
+    <div class="q-text">1. The sky is very dark. It _______ rain soon.</div>
+    <select class="gsel" id="gr_a1" onchange="checkGram('gr_a1','may',1)">
+      <option value="">Choose…</option>
+      <option>must</option>
+      <option>may</option>
+      <option>might not</option>
+    </select>
+    <div class="auto-result pending" id="ar_gr_a1">⏳ Choose above</div>
+  </div>
+
+  <div class="qb" data-id="gr_a2">
+    <div class="q-text">2. He has been running all day. He _______ be exhausted.</div>
+    <select class="gsel" id="gr_a2" onchange="checkGram('gr_a2','must',1)">
+      <option value="">Choose…</option>
+      <option>might</option>
+      <option>must</option>
+      <option>may not</option>
+    </select>
+    <div class="auto-result pending" id="ar_gr_a2">⏳ Choose above</div>
+  </div>
+
+  <div class="qb" data-id="gr_a3">
+    <div class="q-text">3. I'm not sure, but she _______ be at the library.</div>
+    <select class="gsel" id="gr_a3" onchange="checkGram('gr_a3','might',1)">
+      <option value="">Choose…</option>
+      <option>must</option>
+      <option>might</option>
+      <option>will</option>
+    </select>
+    <div class="auto-result pending" id="ar_gr_a3">⏳ Choose above</div>
+  </div>
+
+  <div class="qb" data-id="gr_a4">
+    <div class="q-text">4. The principal _______ declare a holiday tomorrow.</div>
+    <select class="gsel" id="gr_a4" onchange="checkGram('gr_a4','may',1)">
+      <option value="">Choose…</option>
+      <option>may</option>
+      <option>must</option>
+      <option>should</option>
+    </select>
+    <div class="auto-result pending" id="ar_gr_a4">⏳ Choose above</div>
+  </div>
+
+  <h3>B. Rewrite using may, might or must (4 marks)</h3>
+  <p>Rewrite each sentence using the word given. The meaning should stay the same.</p>
+  <div class="info-box">Example: Perhaps she is a doctor. → She <strong>may</strong> be a doctor.</div>
+
+  <p style="margin-top:10px"><strong>1.</strong> Perhaps the weather will be fine tomorrow. (may)</p>
+  <textarea id="sc_gr1" placeholder="Rewrite the sentence using 'may'..." oninput="updateDash()" style="min-height:55px"></textarea>
+  <label>Score: <input type="number" class="score-input" id="sc_gr1_m" min="0" max="1" placeholder="0–1" oninput="updateDash()"></label>
+
+  <p style="margin-top:10px"><strong>2.</strong> I am not sure, but he is probably at home. (might)</p>
+  <textarea id="sc_gr2" placeholder="Rewrite the sentence using 'might'..." oninput="updateDash()" style="min-height:55px"></textarea>
+  <label>Score: <input type="number" class="score-input" id="sc_gr2_m" min="0" max="1" placeholder="0–1" oninput="updateDash()"></label>
+
+  <p style="margin-top:10px"><strong>3.</strong> I'm certain she is very happy with the result. (must)</p>
+  <textarea id="sc_gr3" placeholder="Rewrite the sentence using 'must'..." oninput="updateDash()" style="min-height:55px"></textarea>
+  <label>Score: <input type="number" class="score-input" id="sc_gr3_m" min="0" max="1" placeholder="0–1" oninput="updateDash()"></label>
+
+  <p style="margin-top:10px"><strong>4.</strong> She will possibly come to the party. (might)</p>
+  <textarea id="sc_gr4" placeholder="Rewrite the sentence using 'might'..." oninput="updateDash()" style="min-height:55px"></textarea>
+  <label>Score: <input type="number" class="score-input" id="sc_gr4_m" min="0" max="1" placeholder="0–1" oninput="updateDash()"></label>
+</div>
+
+<!-- ===== READING II ===== -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-icon">📜</div>
+    <div class="sec-title">Reading II — Arrow and Song (Poem)</div>
+    <div class="sec-marks">6 Marks</div>
+  </div>
+
+  <h3>Pre-reading: When and why do we feel happy or sad?</h3>
+
+  <div class="poem-box">
+    <h4 style="font-style:normal;color:#4a0e6e;margin-bottom:12px">Arrow and Song — H.W. Longfellow</h4>
+    <p>I shot an arrow into the air,</p>
+    <p>It fell to earth, I knew not where;</p>
+    <p>For, so swiftly it flew, the sight</p>
+    <p>Could not follow it in its flight.</p>
+    <br>
+    <p>I breathed a song into the air,</p>
+    <p>It fell to earth, I knew not where;</p>
+    <p>For who has sight so keen and strong,</p>
+    <p>That it can follow the flight of song?</p>
+    <br>
+    <p>Long, long afterward, in an oak</p>
+    <p>I found the arrow, still unbroke;</p>
+    <p>And the song, from beginning to end,</p>
+    <p>I found again in the heart of a friend.</p>
+  </div>
+
+  <div class="glossary">
+    <h4>📚 Glossary — Reading II</h4>
+    <div class="glo-grid">
+      <div class="glo-item"><span class="gw">arrow</span><span class="gpron">/ˈærəʊ/</span><span class="gpos">n.</span><span>a thin stick shot from a bow</span></div>
+      <div class="glo-item"><span class="gw">swiftly</span><span class="gpron">/ˈswɪftli/</span><span class="gpos">adv.</span><span>very quickly; fast</span></div>
+      <div class="glo-item"><span class="gw">sight</span><span class="gpron">/saɪt/</span><span class="gpos">n.</span><span>the ability to see; vision</span></div>
+      <div class="glo-item"><span class="gw">keen</span><span class="gpron">/kiːn/</span><span class="gpos">adj.</span><span>sharp; strong; very good</span></div>
+      <div class="glo-item"><span class="gw">oak</span><span class="gpron">/əʊk/</span><span class="gpos">n.</span><span>a large tree with hard wood</span></div>
+      <div class="glo-item"><span class="gw">unbroke</span><span class="gpron">/ʌnˈbrəʊk/</span><span class="gpos">adj.</span><span>not broken; still whole (poetic form)</span></div>
+      <div class="glo-item"><span class="gw">afterward</span><span class="gpron">/ˈɑːftəwəd/</span><span class="gpos">adv.</span><span>at a later time; later</span></div>
+    </div>
+  </div>
+
+  <h3>A. Find rhyming words from the poem (2 marks)</h3>
+
+  <div class="qb" data-id="r2_a1" data-ans="where" data-max="1">
+    <div class="q-text">1. Word that rhymes with <strong>air</strong>:</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a1','flight')">flight</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a1','where')">where</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a1','song')">song</button>
+    </div>
+    <input type="hidden" id="r2_a1">
+    <div class="auto-result pending" id="ar_r2_a1">⏳ Select an answer</div>
+  </div>
+
+  <div class="qb" data-id="r2_a2" data-ans="end" data-max="1">
+    <div class="q-text">2. Word that rhymes with <strong>friend</strong>:</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a2','oak')">oak</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a2','end')">end</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'r2_a2','strong')">strong</button>
+    </div>
+    <input type="hidden" id="r2_a2">
+    <div class="auto-result pending" id="ar_r2_a2">⏳ Select an answer</div>
+  </div>
+
+  <h3>B. Answer the questions (4 marks)</h3>
+
+  <p><strong>1. What are the two things the poet "sent into the air"?</strong></p>
+  <textarea id="sc_r2b1" placeholder="Write your answer..." oninput="updateDash()" style="min-height:60px"></textarea>
+  <label>Score: <input type="number" class="score-input" id="sc_r2b1_m" min="0" max="2" placeholder="0–2" oninput="updateDash()"></label>
+
+  <p style="margin-top:10px"><strong>2. Where did the poet finally find the song? What does this mean?</strong></p>
+  <textarea id="sc_r2b2" placeholder="Write your answer..." oninput="updateDash()" style="min-height:60px"></textarea>
+  <label>Score: <input type="number" class="score-input" id="sc_r2b2_m" min="0" max="2" placeholder="0–2" oninput="updateDash()"></label>
+</div>
+
+<!-- ===== WRITING ===== -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-icon">✍️</div>
+    <div class="sec-title">Writing</div>
+    <div class="sec-marks">10 Marks</div>
+  </div>
+
+  <div class="info-box">📝 Rubric: Content (2) + Organisation (1) + Language (1) + Accuracy (1) = 5 marks each</div>
+
+  <h3>A. Writing Task 1 — Guided Writing (5 marks)</h3>
+  <p>Look at the weather forecast below and write a short paragraph (5–7 sentences) describing what the weather might be like this week. Use <strong>may, might, must, perhaps, maybe</strong>.</p>
+
+  <div style="background:#f0f8ff;border:2px solid #aed6f1;border-radius:10px;padding:14px;margin:10px 0;font-size:13px">
+    <strong>🌤️ Sample Forecast Data:</strong><br>
+    Monday: Cloudy | Tuesday: Light rain possible | Wednesday: Sunny | Thursday: Heavy rain likely | Friday: Cool and windy | Weekend: Uncertain
+  </div>
+
+  <textarea id="sc_wr1" placeholder="Write your paragraph here... Use may, might, must, perhaps, maybe..." oninput="updateDash()" style="min-height:150px"></textarea>
+  <label>Score: <input type="number" class="score-input" id="sc_wr1_m" min="0" max="5" placeholder="0–5" oninput="updateDash()"></label>
+
+  <h3 style="margin-top:20px">B. Writing Task 2 — Free Writing (5 marks)</h3>
+  <p>Write a short paragraph (5–7 sentences) about what you think your life might be like in 10 years. What job might you have? Where might you live? Use modal verbs of probability.</p>
+
+  <textarea id="sc_wr2" placeholder="Write about your future life using may, might, perhaps, maybe..." oninput="updateDash()" style="min-height:150px"></textarea>
+  <label>Score: <input type="number" class="score-input" id="sc_wr2_m" min="0" max="5" placeholder="0–5" oninput="updateDash()"></label>
+</div>
+
+<!-- ===== PROJECT WORK ===== -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-icon">🔬</div>
+    <div class="sec-title">Project Work</div>
+    <div class="sec-marks">5 Marks</div>
+  </div>
+
+  <p>🌦️ <strong>Weather Reporter for a Week!</strong></p>
+  <p>For 5 consecutive days, observe the weather each morning and evening. Write one prediction using <em>may/might/must</em> in the morning, and then check if your prediction was correct in the evening.</p>
+  <p>Example: <em>Morning — "It may rain today because the clouds are dark."  Evening — "My prediction was correct. It did rain."</em></p>
+
+  <textarea id="sc_pj" placeholder="Write your 5-day weather observation and predictions here..." oninput="updateDash()" style="min-height:180px"></textarea>
+  <label>Score: <input type="number" class="score-input" id="sc_pj_m" min="0" max="5" placeholder="0–5" oninput="updateDash()"></label>
+</div>
+
+<!-- ===== EXTRA BIT ===== -->
+<div class="section">
+  <div class="sec-header">
+    <div class="sec-icon">💡</div>
+    <div class="sec-title">Extra Bit — may / might / must</div>
+    <div class="sec-marks">5 Marks</div>
+  </div>
+
+  <div class="gram-box">
+    <h4>🔍 Detailed Rules</h4>
+    <table class="gram-table">
+      <tr><th>Modal</th><th>Use</th><th>Example</th></tr>
+      <tr><td><strong>may</strong></td><td>Possibility (more likely ~50%)<br>Formal permission</td><td>It <em>may</em> be hot tomorrow.<br><em>May</em> I come in?</td></tr>
+      <tr><td><strong>might</strong></td><td>Possibility (less certain ~30%)<br>Past form of may</td><td>She <em>might</em> be at school.<br>He said he <em>might</em> come.</td></tr>
+      <tr><td><strong>must</strong></td><td>Strong deduction / certainty<br>Obligation (different meaning)</td><td>He's been working hard. He <em>must</em> be tired.<br>You <em>must</em> wear a helmet.</td></tr>
+    </table>
+    <p style="margin-top:10px;font-size:13px;color:#4a0e6e"><strong>⚠️ Note:</strong> When <em>must</em> is used for deduction (probability), it is different from when it is used for obligation. Context tells you which meaning is intended!</p>
+  </div>
+
+  <h3>A. Identify the use of must (2 marks)</h3>
+
+  <div class="qb" data-id="ex_a1" data-ans="deduction" data-max="1">
+    <div class="q-text">1. "You haven't eaten all day. You <strong>must</strong> be hungry." — Here <em>must</em> expresses —</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'ex_a1','obligation')">obligation</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'ex_a1','deduction')">deduction (certainty)</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'ex_a1','permission')">permission</button>
+    </div>
+    <input type="hidden" id="ex_a1">
+    <div class="auto-result pending" id="ar_ex_a1">⏳ Select an answer</div>
+  </div>
+
+  <div class="qb" data-id="ex_a2" data-ans="obligation" data-max="1">
+    <div class="q-text">2. "You <strong>must</strong> wear your uniform to school." — Here <em>must</em> expresses —</div>
+    <div class="mcq-opts">
+      <button class="mcq-btn" onclick="selMCQ(this,'ex_a2','obligation')">obligation</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'ex_a2','deduction')">deduction (certainty)</button>
+      <button class="mcq-btn" onclick="selMCQ(this,'ex_a2','possibility')">possibility</button>
+    </div>
+    <input type="hidden" id="ex_a2">
+    <div class="auto-result pending" id="ar_ex_a2">⏳ Select an answer</div>
+  </div>
+
+  <h3>B. Fill in with may, might or must (3 marks)</h3>
+
+  <div class="qb" data-id="ex_b1">
+    <div class="q-text">1. The lights are on. Someone _______ be inside.</div>
+    <select class="gsel" id="ex_b1" onchange="checkGram('ex_b1','must',1)">
+      <option value="">Choose…</option>
+      <option>may</option>
+      <option>might</option>
+      <option>must</option>
+    </select>
+    <div class="auto-result pending" id="ar_ex_b1">⏳ Choose above</div>
+  </div>
+
+  <div class="qb" data-id="ex_b2">
+    <div class="q-text">2. I'm not sure, but it _______ snow tonight.</div>
+    <select class="gsel" id="ex_b2" onchange="checkGram('ex_b2','might',1)">
+      <option value="">Choose…</option>
+      <option>might</option>
+      <option>must</option>
+      <option>will</option>
+    </select>
+    <div class="auto-result pending" id="ar_ex_b2">⏳ Choose above</div>
+  </div>
+
+  <div class="qb" data-id="ex_b3">
+    <div class="q-text">3. There's a 50% chance she _______ come to the party.</div>
+    <select class="gsel" id="ex_b3" onchange="checkGram('ex_b3','may',1)">
+      <option value="">Choose…</option>
+      <option>must</option>
+      <option>may</option>
+      <option>might not</option>
+    </select>
+    <div class="auto-result pending" id="ar_ex_b3">⏳ Choose above</div>
+  </div>
+</div>
+
+<!-- ===== SUBMIT ===== -->
+<div class="submit-section">
+  <h3 style="margin-bottom:8px;font-size:20px">🎉 Ready to Submit?</h3>
+  <p style="opacity:.85;margin-bottom:16px;font-size:14px">Make sure you've filled in your Name, Roll No., and Date before submitting!</p>
+  <button class="submit-btn" onclick="submitAll()">📤 Submit to Teacher</button>
+</div>
+
+</div><!-- end container -->
+
+<script>
+const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwAp1ILg-kioVPzBITrTat0bnLgGgmMZBbaOdDMtVtSJE_W3vYjKqR-8mjM9FrREONk/exec';
+const autoScores = {};
+
+const MANUAL_SC = [
+  'sc_r1c1_m','sc_r1c2_m','sc_r1c3_m',
+  'sc_sp_m',
+  'sc_ls1_m','sc_ls2_m',
+  'sc_gr1_m','sc_gr2_m','sc_gr3_m','sc_gr4_m',
+  'sc_r2b1_m','sc_r2b2_m',
+  'sc_wr1_m','sc_wr2_m',
+  'sc_pj_m'
+];
+
+const AUTO_IDS = [
+  'gs_c1','gs_c2','gs_c3',
+  'r1_a1','r1_a2',
+  'r1_b1','r1_b2','r1_b3','r1_b4',
+  'sp_b1','sp_b2',
+  'ls_b1','ls_b2','ls_b3','ls_b4',
+  'gr_a1','gr_a2','gr_a3','gr_a4',
+  'r2_a1','r2_a2',
+  'ex_a1','ex_a2',
+  'ex_b1','ex_b2','ex_b3'
+];
+
+const SEC = {
+  gs: { auto:['gs_c1','gs_c2','gs_c3'], sc:[], max:3, sv:'ss_gs', sb:'sb_gs' },
+  r1: { auto:['r1_a1','r1_a2','r1_b1','r1_b2','r1_b3','r1_b4'], sc:['sc_r1c1_m','sc_r1c2_m','sc_r1c3_m'], max:12, sv:'ss_r1', sb:'sb_r1' },
+  sp: { auto:['sp_b1','sp_b2'], sc:['sc_sp_m'], max:4, sv:'ss_sp', sb:'sb_sp' },
+  ls: { auto:['ls_b1','ls_b2','ls_b3','ls_b4'], sc:['sc_ls1_m','sc_ls2_m'], max:7, sv:'ss_ls', sb:'sb_ls' },
+  gr: { auto:['gr_a1','gr_a2','gr_a3','gr_a4'], sc:['sc_gr1_m','sc_gr2_m','sc_gr3_m','sc_gr4_m'], max:8, sv:'ss_gr', sb:'sb_gr' },
+  r2: { auto:['r2_a1','r2_a2'], sc:['sc_r2b1_m','sc_r2b2_m'], max:6, sv:'ss_r2', sb:'sb_r2' },
+  wr: { auto:[], sc:['sc_wr1_m','sc_wr2_m'], max:10, sv:'ss_wr', sb:'sb_wr' },
+  pj: { auto:[], sc:['sc_pj_m'], max:5, sv:'ss_pj', sb:'sb_pj' },
+  ex: { auto:['ex_a1','ex_a2','ex_b1','ex_b2','ex_b3'], sc:[], max:5, sv:'ss_ex', sb:'sb_ex' }
+};
+
+function selMCQ(btn, fid, val) {
+  const qb = btn.closest('.qb');
+  qb.querySelectorAll('.mcq-btn').forEach(b => b.classList.remove('correct-ans','wrong-ans'));
+  document.getElementById(fid).value = val;
+  const correct = qb.dataset.ans;
+  const max = parseFloat(qb.dataset.max||1);
+  const ar = document.getElementById('ar_'+fid);
+  if (val === correct) {
+    btn.classList.add('correct-ans');
+    ar.textContent = '✅ Correct! +'+max;
+    ar.className = 'auto-result correct';
+    autoScores[fid] = max;
+  } else {
+    btn.classList.add('wrong-ans');
+    ar.textContent = '❌ Incorrect. Answer: '+correct;
+    ar.className = 'auto-result wrong';
+    autoScores[fid] = 0;
+  }
+  updateDash();
+}
+
+function selTF(btn, fid, val) {
+  const qb = btn.closest('.qb');
+  qb.querySelectorAll('.tf-btn').forEach(b => b.classList.remove('correct-ans','wrong-ans'));
+  document.getElementById(fid).value = val;
+  const correct = qb.dataset.ans;
+  const max = parseFloat(qb.dataset.max||1);
+  const ar = document.getElementById('ar_'+fid);
+  if (val === correct) {
+    btn.classList.add('correct-ans');
+    ar.textContent = '✅ Correct! +'+max;
+    ar.className = 'auto-result correct';
+    autoScores[fid] = max;
+  } else {
+    btn.classList.add('wrong-ans');
+    ar.textContent = '❌ Incorrect. Answer: '+correct;
+    ar.className = 'auto-result wrong';
+    autoScores[fid] = 0;
+  }
+  updateDash();
+}
+
+function checkGram(fid, correct, max) {
+  const val = document.getElementById(fid).value;
+  const ar = document.getElementById('ar_'+fid);
+  if (!val) return;
+  if (val.toLowerCase().trim() === correct.toLowerCase().trim()) {
+    ar.textContent = '✅ Correct! +'+max;
+    ar.className = 'auto-result correct';
+    autoScores[fid] = max;
+  } else {
+    ar.textContent = '❌ Incorrect. Answer: '+correct;
+    ar.className = 'auto-result wrong';
+    autoScores[fid] = 0;
+  }
+  updateDash();
+}
+
+function updateDash() {
+  let total = 0;
+  // manual scores
+  MANUAL_SC.forEach(id => {
+    const v = parseFloat(document.getElementById(id)?.value) || 0;
+    total += v;
+  });
+  // auto scores
+  AUTO_IDS.forEach(id => {
+    total += autoScores[id] || 0;
+  });
+  total = Math.min(60, Math.round(total * 10) / 10);
+  document.getElementById('dObt').textContent = total;
+  const pct = Math.round((total/60)*100);
+  document.getElementById('dPct').textContent = pct + '%';
+  document.getElementById('dBar').style.width = pct + '%';
+  const grades = [[90,'A+'],[80,'A'],[70,'B+'],[60,'B'],[50,'C+'],[40,'C'],[35,'D'],[0,'E']];
+  let g = 'E';
+  for (const [t,gr] of grades) { if (pct >= t) { g = gr; break; } }
+  document.getElementById('dGrade').textContent = g;
+  // sections
+  for (const [key, s] of Object.entries(SEC)) {
+    let st = 0;
+    s.auto.forEach(id => st += autoScores[id]||0);
+    s.sc.forEach(id => st += parseFloat(document.getElementById(id)?.value)||0);
+    st = Math.min(s.max, Math.round(st*10)/10);
+    document.getElementById(s.sv).textContent = st+'/'+s.max;
+  }
+  autoSave();
+}
+
+function gatherData() {
+  const d = {
+    unit:'Unit 15', name:document.getElementById('sName').value,
+    roll:document.getElementById('sRoll').value, date:document.getElementById('sDate').value,
+    total:document.getElementById('dObt').textContent,
+    pct:document.getElementById('dPct').textContent,
+    grade:document.getElementById('dGrade').textContent
+  };
+  AUTO_IDS.forEach(id => { d['ans_'+id] = document.getElementById(id)?.value || ''; d['sc_'+id] = autoScores[id]||0; });
+  ['sc_r1c1','sc_r1c2','sc_r1c3','sc_sp','sc_ls1','sc_ls2',
+   'sc_gr1','sc_gr2','sc_gr3','sc_gr4','sc_r2b1','sc_r2b2','sc_wr1','sc_wr2','sc_pj'].forEach(id => {
+    d[id] = document.getElementById(id)?.value || '';
+  });
+  MANUAL_SC.forEach(id => { d[id] = document.getElementById(id)?.value || ''; });
+  return d;
+}
+
+function autoSave() {
+  try { localStorage.setItem('unit15_data', JSON.stringify(gatherData())); } catch(e){}
+}
+
+function loadSave() {
+  try {
+    const s = localStorage.getItem('unit15_data');
+    if (!s) return;
+    const d = JSON.parse(s);
+    if (d.name) document.getElementById('sName').value = d.name;
+    if (d.roll) document.getElementById('sRoll').value = d.roll;
+    if (d.date) document.getElementById('sDate').value = d.date;
+    MANUAL_SC.forEach(id => { if (d[id] !== undefined) { const el = document.getElementById(id); if(el) el.value = d[id]; }});
+    ['sc_r1c1','sc_r1c2','sc_r1c3','sc_sp','sc_ls1','sc_ls2',
+     'sc_gr1','sc_gr2','sc_gr3','sc_gr4','sc_r2b1','sc_r2b2','sc_wr1','sc_wr2','sc_pj'].forEach(id => {
+      if (d[id] !== undefined) { const el = document.getElementById(id); if(el) el.value = d[id]; }
+    });
+    updateDash();
+  } catch(e){}
+}
+
+function submitAll() {
+  const name = document.getElementById('sName').value.trim();
+  if (!name) { alert('⚠️ Please enter your name before submitting!'); return; }
+  const data = gatherData();
+  fetch(SHEETS_URL, {
+    method:'POST', mode:'no-cors',
+    headers:{'Content-Type':'application/json'},
+    body: JSON.stringify(data)
+  }).then(() => alert('✅ Submitted successfully! Great work, '+name+'! 🎉'))
+    .catch(() => alert('⚠️ Could not connect. Please check your internet and try again.'));
+}
+
+window.onload = function() {
+  loadSave();
+  const today = new Date().toISOString().split('T')[0];
+  if (!document.getElementById('sDate').value) document.getElementById('sDate').value = today;
+};
+</script>
+</body>
+</html>
